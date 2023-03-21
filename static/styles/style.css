@@ -1,22 +1,27 @@
 body {
-    background-color: #f7f7f7;
-
-    font-family: Arial, sans-serif;
+    background-color: white;
+    box-sizing: border-box;
 }
 
 .containerform {
+    background-color: rgba(253, 253, 253, 0.829);
     width: 350px;
     margin: 0 auto;
-    padding-top: 30px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 1px 1px 2px #888;
-    padding: 10px;
+    margin-top: 8%;
+    border: 2px solid #cccccc94;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #cccccc94;
+    padding: 20px;
     transition: 0.7s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
 }
 
 .containerform:hover {
-    border-color: #5c5c5cad;
+    border-color: #17a3b86c;
 }
 
 #formdiv {
@@ -28,10 +33,28 @@ body {
     box-shadow: none;
 }
 
+#loginLabel {
+    margin-left: 15px;
+}
+
+#input {
+    border-width: 2px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
 #loginSubmit {
     background-color: #17a2b8;
     border-color: #17a2b8;
+    border-radius: 20px;
     width: 100%;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
 }
 
 #loginSubmit:hover {
@@ -42,14 +65,56 @@ body {
     color: #a5a5a5;
 }
 
-#input:-moz-placeholder {
-    color: #a5a5a5;
+.imgContainer {
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/gamescenter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-#input::-moz-placeholder {
-    color: #a5a5a5;
+.login-form h2 {
+    text-align: center;
+    font-size: 1.3rem;
 }
 
-#input:-ms-input-placeholder {
-    color: #a5a5a5;
+.login-upper-text {
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+}
+
+#login-back {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+#login-back a {
+    text-decoration: none;
+
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    color: #17a2b8;
+}
+
+#login-back a:hover {
+    color: black;
+}
+
+
+
+#connectButton {
+    background-color: white;
+    color: #0275d8;
+}
+
+#connectButton:hover {
+    background-color: #0275d8;
+    color: white;
 }

@@ -13,10 +13,9 @@
 
 <body>
 
-    <a name="connexion" id="" class="btn btn-primary" href="?action=connexion" role="button">Se connecter</a>
+    <a name="connexion" id="connectButton" class="btn btn-primary" href="?action=connexion" role="button">Se connecter</a>
 
-
-
+ 
 
 
     <!-- Optional JavaScript -->
