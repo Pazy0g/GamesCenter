@@ -11,6 +11,9 @@ require_once "controller/config.php";
 </head>
 
 <?php
+
+//! ----------------------------- ROOTERS ----------------------------------------------------
+
 // Check if an action is set in the $_GET array
 if (isset($_GET["action"])) {
     // Use a switch statement to determine which page to include based on the value of $_GET["action"]
