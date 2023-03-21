@@ -1,0 +1,17 @@
+{
+    "name": "games/prj",
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Games\\Prj\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ewen",
+            "email": "107175527+Pazy0g@users.noreply.github.com"
+        }
+    ]
+}
