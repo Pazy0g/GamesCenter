@@ -11,7 +11,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
@@ -28,11 +30,11 @@
         </div>
         <form action="" method="post">
             <div class="form-group" id="formdiv">
-                <label for="pseudo" id="loginLabel">Pseudo</label>
+                <label for="pseudo" class="loginLabel">Pseudo</label>
                 <input type="text" name="uid" class="form-control" id="input" placeholder="pseudo">
             </div>
             <div class="form-group">
-                <label for="password" id="loginLabel">Mot de passe</label>
+                <label for="password" class="loginLabel">Mot de passe</label>
                 <input type="password" name="pwd" class="form-control" id="input" placeholder="Mot de passe">
             </div>
             <button type="submit" id="loginSubmit" class="btn btn-primary">Valider</button>

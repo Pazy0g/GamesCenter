@@ -1,16 +1,53 @@
+:root {
+    --button-color: #17a2b8;
+    --button-hover-color: #117a8b;
+}
+
+
+
 body {
     background-color: white;
     box-sizing: border-box;
 }
 
+
+
+
+/*===================================== ACCUEIL =====================================*/
+#connectButton {
+    background-color: var(--button-color);
+    color: white;
+    border-color: var(--button-color);
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding: 5px;
+}
+
+#connectButton:hover {
+    background-color: var(--button-hover-color);
+    color: white;
+    border-color: var(--button-hover-color);
+}
+
+
+
+
 /*===================================== LOGIN =====================================*/
 /* LOGIN FORM CONTAINER */
 .containerform {
-    background-color: rgba(253, 253, 253, 0.829);
+    background-color: rgb(253, 253, 253);
     width: 350px;
     margin: 0 auto;
     margin-top: 8%;
-    border: 2px solid #cccccc94;
+    border: 2px solid #ccccccb9;
     border-radius: 10px;
     box-shadow: 1px 1px 1px #cccccc94;
     padding: 20px;
@@ -26,6 +63,29 @@ body {
     border-color: #17a3b86c;
 }
 
+/* LOGIN TITLE AND LOGO */
+.imgContainer {
+    width: 100%;
+    height: 200px;
+    background-image: url("../images/gamescenter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-form h2 {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.login-upper-text {
+    color: black;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
 #formdiv {
     margin-bottom: 20px;
 }
@@ -36,7 +96,7 @@ body {
     box-shadow: none;
 }
 
-#loginLabel {
+.loginLabel {
     margin-left: 15px;
 }
 
@@ -49,49 +109,32 @@ body {
     -o-border-radius: 20px;
 }
 
-/* LOGIN BUTTON */
-#loginSubmit {
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-    border-radius: 20px;
-    width: 100%;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-#loginSubmit:hover {
-    background-color: #117a8b;
-}
-
 #input::-webkit-input-placeholder {
     color: #a5a5a5;
 }
 
-/* LOGO */
-.imgContainer {
+/* LOGIN BUTTON */
+#loginSubmit {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+    border-radius: 20px;
     width: 100%;
-    height: 200px;
-    background-image: url("../images/gamescenter.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    transition: 0.6s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
 }
 
-/* LOGIN TITLE AND OTHER LINKS */
-.login-form h2 {
-    text-align: center;
-    font-size: 1.3rem;
+#loginSubmit:hover {
+    background-color: var(--button-hover-color);
 }
 
-.login-upper-text {
-    color: black;
-    text-align: center;
-    padding-top: 30px;
-}
-
+/* BACK BUTTON */
 #login-back {
     text-align: center;
     margin-top: 25px;
@@ -106,21 +149,9 @@ body {
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
-    color: #17a2b8;
+    color: var(--button-color);
 }
 
 #login-back a:hover {
-    color: black;
-}
-
-
-/*===================================== ACCUEIL =====================================*/
-#connectButton {
-    background-color: white;
-    color: #0275d8;
-}
-
-#connectButton:hover {
-    background-color: #0275d8;
-    color: white;
+    color: var(--button-hover-color);
 }
