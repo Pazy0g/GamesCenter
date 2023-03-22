@@ -91,7 +91,7 @@ body {
 }
 
 /* LOGIN INPUTS AND LABELS STYLE */
-#input:focus {
+#inputUid:focus {
     border-color: #17a2b8;
     box-shadow: none;
 }
@@ -100,7 +100,7 @@ body {
     margin-left: 15px;
 }
 
-#input {
+#inputUid {
     border-width: 2px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
@@ -109,7 +109,25 @@ body {
     -o-border-radius: 20px;
 }
 
-#input::-webkit-input-placeholder {
+#inputUid::-webkit-input-placeholder {
+    color: #a5a5a5;
+}
+
+#inputPwd:focus {
+    border-color: #17a2b8;
+    box-shadow: none;
+}
+
+#inputPwd {
+    border-width: 2px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#inputPwd::-webkit-input-placeholder {
     color: #a5a5a5;
 }
 
@@ -132,6 +150,18 @@ body {
 
 #loginSubmit:hover {
     background-color: var(--button-hover-color);
+}
+
+#loginSubmit:disabled {
+
+    cursor: not-allowed;
+
+}
+
+#loginSubmit:disabled:hover {
+
+    background-color: var(--button-color);
+
 }
 
 /* BACK BUTTON */
