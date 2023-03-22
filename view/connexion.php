@@ -27,7 +27,7 @@
         <form action="" method="post">
             <div class="form-group" id="formdiv">
                 <label for="pseudo" class="loginLabel">Pseudo</label>
-                <input type="text" name="uid" class="form-control loginInputs" id="inputUid" placeholder="pseudo">
+                <input type="text" name="uid" class="form-control loginInputs" id="inputUid" placeholder="Pseudo">
             </div>
             <div class="form-group">
                 <label for="password" class="loginLabel">Mot de passe</label>
