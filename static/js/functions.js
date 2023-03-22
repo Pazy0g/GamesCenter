@@ -9,7 +9,12 @@ function updateButtonState() {
     } else {
         button.disabled = true;
     }
+
 }
+
+
+
+
 
 // Écouteurs d'évènement sur les champs
 pseudo.addEventListener('input', updateButtonState);
