@@ -28,7 +28,7 @@ body {
     -moz-border-radius: 15px;
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
-    padding: 5px;
+    padding: 8px;
 }
 
 #connectButton:hover {
@@ -154,4 +154,29 @@ body {
 
 #login-back a:hover {
     color: var(--button-hover-color);
+}
+
+#sub-back {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+#sub-back a {
+    word-wrap: break-word;
+    text-decoration: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    color: var(--button-color);
+}
+
+#sub-back a:hover {
+    color: var(--button-hover-color);
+}
+
+.inscription-back a {
+    display: block;
 }

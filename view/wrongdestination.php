@@ -12,7 +12,6 @@
 
     <h1>OOPS !</h1>
     <p>Ce lien de mène nulpart. Veuillez contacter un administrateur pour plus d'informations</p>
-    <p>Vous pouvez revenir à l'accueil en cliquant <a href="../../index.php">ici</a></p>
-</body>
+    <p>Vous pouvez revenir à l'accueil en cliquant <a href=" <?php echo $root . "/index.php"; ?>">ici</a>
 
 </html>

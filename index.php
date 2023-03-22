@@ -11,7 +11,6 @@ require_once "controller/config.php";
 </head>
 
 <?php
-
 //! ----------------------------- ROOTERS ----------------------------------------------------
 
 // Check if an action is set in the $_GET array
@@ -36,6 +35,11 @@ if (isset($_GET["action"])) {
         case "jeux":
             $title = "GamesCenter - Les jeux";
             include "view/jeux.php";
+            break;
+
+        case "Apropos":
+            $title = "GamesCenter - A propos";
+            include "view/Apropos.php";
             break;
 
         default:
