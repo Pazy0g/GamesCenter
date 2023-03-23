@@ -3,7 +3,7 @@ let password = document.getElementById('inputPwd');
 let button = document.getElementById("loginSubmit");
 
 // Fonction pour mettre à jour l'état du bouton
-function updateButtonState() {
+function LoginChecker() {
     if (pseudo.value && password.value) {
         button.disabled = false;
     } else {
@@ -12,8 +12,8 @@ function updateButtonState() {
 }
 
 // Écouteurs d'évènement sur les champs
-pseudo.addEventListener('input', updateButtonState);
-password.addEventListener('input', updateButtonState);
+pseudo.addEventListener('input', LoginChecker);
+password.addEventListener('input', LoginChecker);
 
 // Initialise l'état du bouton
-updateButtonState();
+LoginChecker();

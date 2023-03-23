@@ -2,18 +2,18 @@
 <html lang="fr">
 
 <head>
-    <title><?= $title ?> </title>
+    <title></title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <base href="/">
 
-    <!-- Bootstrap CSS --> 
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" href="../static/styles/style.css">
 </head>
 
 <body>
@@ -35,11 +35,11 @@
             </div>
             <button type="submit" id="loginSubmit" class="btn btn-primary">Valider</button>
         </form>
-        <p id="login-back"><a href="<?php echo $root . "/index.php" ?>">Revenir à l'accueil</a></p>
+        <p id="login-back"><a href="accueil.php">Revenir à l'accueil</a></p>
 
         <div class="inscription-back">
             <p id="sub-back">Pas de compte ?
-                <a href="<?php echo $root . "/view/inscription.php" ?>">s'inscrire</a>
+                <a href="inscription.php">s'inscrire</a>
             </p>
         </div>
 
@@ -47,7 +47,7 @@
 
 
     </div>
-    <script src="<?php echo $root . "/static/js/functions.js" ?>"></script>
+    <script src="../static/js/functions.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

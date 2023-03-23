@@ -43,13 +43,13 @@ body {
 /*===================================== LOGIN =====================================*/
 /* LOGIN FORM CONTAINER */
 .containerform {
-    background-color: rgb(253, 253, 253);
+    background-color: rgb(255, 255, 255);
     width: 350px;
     margin: 0 auto;
     margin-top: 6%;
-    border: 2px solid #ccccccb9;
+    border: 2px solid #cccccc6c;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px #cccccc94;
+    box-shadow: 1px 1px 1px #cccccc6c;
     padding: 20px;
     transition: 0.7s;
     -webkit-border-radius: 10px;
@@ -204,6 +204,162 @@ body {
 }
 
 #sub-back a:hover {
+    color: var(--button-hover-color);
+}
+
+.inscription-back a {
+    display: block;
+}
+
+/* ============================ SIGNUP ========================== */
+
+#formdiv-signup {
+    margin-bottom: 20px;
+}
+
+/* User ID */
+#SignupInputUid:focus {
+    border-color: #17a2b8;
+    box-shadow: none;
+}
+
+.SignupLabel {
+    margin-left: 12px;
+}
+
+#SignupInputUid {
+    border-width: 2px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#SignupInputUid::-webkit-input-placeholder {
+    color: #a5a5a5;
+}
+
+/* Email */
+
+#SignupInputEmail:focus {
+    border-color: #17a2b8;
+    box-shadow: none;
+}
+
+
+#SignupInputEmail {
+    border-width: 2px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#SignupInputEmail::-webkit-input-placeholder {
+    color: #a5a5a5;
+}
+
+
+/* Password */
+
+#SignupInputPwds {
+    border-color: #17a2b8;
+    box-shadow: none;
+}
+
+#SignupInputPwd {
+    border-width: 2px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+#SignupInputPwd::-webkit-input-placeholder {
+    color: #a5a5a5;
+}
+
+/* Submit button */
+
+#SignupSubmit {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+    border-radius: 20px;
+    width: 100%;
+    transition: 0.6s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+#SignupSubmit:hover {
+    background-color: var(--button-hover-color);
+}
+
+#SignupSubmit:disabled {
+
+    cursor: not-allowed;
+
+}
+
+#SignupSubmit:disabled:hover {
+
+    background-color: var(--button-color);
+
+}
+
+#RGPDLABEL {
+    font-size: 1.2rem;
+}
+
+/* BACK BUTTON */
+#Signup-back {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+#Signup-back a {
+    text-decoration: none;
+
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    color: var(--button-color);
+}
+
+#Signup-back a:hover {
+    color: var(--button-hover-color);
+}
+
+#con-back {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 600;
+}
+
+#con-back a {
+    word-wrap: break-word;
+    text-decoration: none;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    color: var(--button-color);
+}
+
+#con-back a:hover {
     color: var(--button-hover-color);
 }
 
