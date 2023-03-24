@@ -17,7 +17,7 @@
 
 <body>
 
-
+<div class="entering-form">
     <div class=" containerform login-form signup-form">
         <div class="imgContainer">
 
@@ -56,7 +56,7 @@
                 </p>
             </div>
         </form>
-
+</div>
 
 
 

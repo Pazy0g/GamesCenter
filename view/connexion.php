@@ -17,32 +17,32 @@
 </head>
 
 <body>
-
-    <div class=" containerform login-form">
-        <div class="imgContainer"></div>
-        <div class="login-upper-text">
-            <i class="fa-sharp fa-regular fa-user"></i>
-            <h2>Connexion</h2>
-        </div>
-        <form action="" method="post">
-            <div class="form-group" id="formdiv">
-                <label for="pseudo" class="loginLabel">Pseudo</label>
-                <input type="text" name="uid" class="form-control loginInputs" id="inputUid" placeholder="Pseudo">
+    <div class="entering-form">
+        <div class=" containerform login-form">
+            <div class="imgContainer"></div>
+            <div class="login-upper-text">
+                <i class="fa-sharp fa-regular fa-user"></i>
+                <h2>Connexion</h2>
             </div>
-            <div class="form-group">
-                <label for="password" class="loginLabel">Mot de passe</label>
-                <input type="password" name="pwd" class="form-control loginInputs" id="inputPwd" placeholder="Mot de passe">
+            <form action="" method="post">
+                <div class="form-group" id="formdiv">
+                    <label for="pseudo" class="loginLabel">Pseudo</label>
+                    <input type="text" name="uid" class="form-control loginInputs" id="inputUid" placeholder="Pseudo">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="loginLabel">Mot de passe</label>
+                    <input type="password" name="pwd" class="form-control loginInputs" id="inputPwd" placeholder="Mot de passe">
+                </div>
+                <button type="submit" id="loginSubmit" class="btn btn-primary">Valider</button>
+            </form>
+            <p id="login-back"><a href="accueil.php">Revenir à l'accueil</a></p>
+
+            <div class="inscription-back">
+                <p id="sub-back">Pas de compte ?
+                    <a href="inscription.php">s'inscrire</a>
+                </p>
             </div>
-            <button type="submit" id="loginSubmit" class="btn btn-primary">Valider</button>
-        </form>
-        <p id="login-back"><a href="accueil.php">Revenir à l'accueil</a></p>
-
-        <div class="inscription-back">
-            <p id="sub-back">Pas de compte ?
-                <a href="inscription.php">s'inscrire</a>
-            </p>
         </div>
-
 
 
 
