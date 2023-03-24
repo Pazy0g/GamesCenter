@@ -18,7 +18,7 @@
 <body>
 
 
-    <div class=" containerform login-form">
+    <div class=" containerform login-form signup-form">
         <div class="imgContainer">
 
         </div>
@@ -36,25 +36,26 @@
                 <label for="email" class="SignupLabel">Email</label>
                 <input type="email" name="email" class="form-control signupInputs" id="SignupInputEmail" placeholder="Pseudo">
             </div>
-            <div class="form-group">
+            <div id="respPwd" class="form-group">
                 <label for="password" class="SignupLabel">Mot de passe</label>
                 <input type="password" name="pwd" class="form-control loginInputs" id="SignupInputPwd" placeholder="Mot de passe">
             </div>
             <div class="form-check">
                 <label id="RGPDLABEL" class="form-check-label">
-                    <input type="checkbox" class="form-check-input" name="" id="rgpd" value="">
+                    <input type="checkbox" class="form-check-input" name="" id="rgpd" value="rgpd">
                     Vous devez accepter la RGPD pour vous inscrire
                 </label>
             </div>
             <button type="submit" id="SignupSubmit" class="btn btn-primary">Valider</button>
-        </form>
-        <p id="Signup-back"><a href="accueil.php">Revenir à l'accueil</a></p>
 
-        <div class="inscription-back">
-            <p id="con-back">Déjà inscrit ?
-                <a href="connexion.php">se connecter</a>
-            </p>
-        </div>
+            <p id="Signup-back"><a href="accueil.php">Revenir à l'accueil</a></p>
+
+            <div class="inscription-back">
+                <p id="con-back">Déjà inscrit ?
+                    <a href="connexion.php">se connecter</a>
+                </p>
+            </div>
+        </form>
 
 
 

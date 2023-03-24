@@ -4,7 +4,7 @@ let button = document.getElementById("loginSubmit");
 
 // Fonction pour mettre à jour l'état du bouton
 function LoginChecker() {
-    if (pseudo.value && password.value) {
+    if (pseudo.value.length >= 5 && password.value.length >= 8) {
         button.disabled = false;
     } else {
         button.disabled = true;

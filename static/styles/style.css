@@ -56,6 +56,7 @@ body {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    margin-bottom: 2%;
 
 }
 
@@ -213,8 +214,14 @@ body {
 
 /* ============================ SIGNUP ========================== */
 
+
+.signup-form {
+    margin-top: 50px;
+}
+
 #formdiv-signup {
     margin-bottom: 20px;
+
 }
 
 /* User ID */
@@ -317,7 +324,9 @@ body {
 }
 
 #RGPDLABEL {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 /* BACK BUTTON */

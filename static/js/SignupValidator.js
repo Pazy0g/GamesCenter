@@ -3,7 +3,7 @@ let pseudo = document.getElementById('SignupInputUid');
 let email = document.getElementById("SignupInputEmail");
 let password = document.getElementById("SignupInputPwd");
 let button = document.getElementById("SignupSubmit");
-let rgpd = document.getElementById("rgpd");
+
 
 
 function SignupChecker() {
@@ -44,28 +44,61 @@ function SignupChecker() {
     }
 
 
-    const EmailValidator = [
+    /*
+     Condition similaire à celle du pseudo pour le mot de passe
+    */
 
-        "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+    let pwdDiv = document.getElementById("respPwd");
 
-    ]
+    // Vérifier s'il y a déjà une réponse et la supprimer
+    let previousPwdResponse = pwdDiv.querySelector(".pwdResponse");
+    if (previousPwdResponse) {
+        pwdDiv.removeChild(previousPwdResponse);
+    }
+
+    // Condition pour vérifier la longueur du mot de passe et afficher une réponse en conséquence
+    if (password.value.length > 0 && password.value.length <= 8) {
+        let pwdResponse = document.createElement("p");
+        pwdResponse.textContent = "Votre mot de passe doit faire au moins 8 caractères";
+        pwdResponse.style.fontSize = "12px";
+        pwdResponse.style.fontWeight = "bold";
+        pwdResponse.style.color = "red";
+        pwdResponse.style.marginLeft = "15px";
+
+        // Ajouter une classe pour faciliter la recherche ultérieure
+        pwdResponse.classList.add("pwdResponse");
+        pwdDiv.appendChild(pwdResponse);
+    }
 
 
-    //! Problème à régler ( le bouton s'active uniquement si j'écris le mdp après avoir cocher la RGPD ) à voir rapidement
+    /*
+    Conditions de vérification du reste du formulaire
+    avec regEX pour l'email
+    ainsi q'une condition qui vérifie si la case RGPD est cochée
+    */
 
-    // Vérifiez toutes les conditions pour activer le bouton
-    if (pseudo.value.length > 0 && EmailValidator && rgpd.checked && password.value.length >= 8) {
+    const rgpdCheckbox = document.getElementById("rgpd");
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    rgpdCheckbox.style.color = "red";
+
+    document.getElementById("RGPDLABEL").style.opacity = "1";
+    if (rgpdCheckbox.checked) {
+        document.getElementById("RGPDLABEL").style.opacity = "0.6";
+    }
+
+    rgpdCheckbox.addEventListener('click', SignupChecker);
+    if (rgpdCheckbox.checked && pseudo.value.length > 0 && emailRegex.test(email.value) && password.value.length >= 8) {
+
         button.disabled = false; // Active le bouton
-
     } else {
         button.disabled = true; // Désactive le bouton
     }
 }
 
 
-
 pseudo.addEventListener('input', SignupChecker);
 email.addEventListener('input', SignupChecker);
 password.addEventListener('input', SignupChecker);
+
 
 SignupChecker();
