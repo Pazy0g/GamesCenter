@@ -1,8 +1,53 @@
+/* roboto-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/roboto-v30-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/roboto-v30-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/roboto-v30-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/roboto-v30-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../font/roboto-v30-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/roboto-v30-latin-regular.svg#Roboto') format('svg');
+    /* Legacy iOS */
+}
+
+/* raleway-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/raleway-v28-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: url('../font/raleway-v28-latin-regular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../font/raleway-v28-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../font/raleway-v28-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('../font/raleway-v28-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('../font/raleway-v28-latin-regular.svg#Raleway') format('svg');
+    /* Legacy iOS */
+}
+
+
 :root {
+    /* buttons color */
     --button-color: #17a2b8;
     --button-hover-color: #117a8b;
-
-    
+    /* Fonts */
+    --font-family: "Roboto";
+    --title-font-family: Raleway;
 }
 
 
@@ -10,6 +55,18 @@
 body {
     background-color: white;
     box-sizing: border-box;
+
+}
+
+p {
+    font-family: var(--font-family);
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--title-font-family);
 }
 
 .entering-form {
@@ -97,6 +154,7 @@ body {
 .login-form h2 {
     text-align: center;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .login-upper-text {
