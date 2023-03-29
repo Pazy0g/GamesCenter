@@ -47,7 +47,7 @@
     --button-hover-color: #117a8b;
     /* Fonts */
     --font-family: "Roboto";
-    --title-font-family: Raleway;
+    --title-font-family: "Raleway";
 }
 
 
@@ -90,27 +90,111 @@ h5 {
 
 
 /*===================================== ACCUEIL =====================================*/
-#connectButton {
+
+/* Overall header animations */
+
+nav {
+    animation: navEntrance 0.8s ease 0s 1 normal forwards;
+    -webkit-animation: navEntrance 0.8s ease 0s 1 normal forwards;
+}
+
+@keyframes navEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(-250px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+/* Nav buttons */
+
+#navSignup {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+    border-radius: 20px;
+    width: 100%;
+    transition: 0.6s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    color: white;
+
+}
+
+#navSignup:hover {
+    background-color: transparent;
+    color: var(--button-hover-color);
+}
+
+#navButtons {
+    margin: 5px;
+}
+
+#navLogin {
+    background-color: transparent;
+    border-color: var(--button-color);
+    border-radius: 20px;
+    width: 100%;
+    transition: 0.6s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: 0;
+    -moz-transition: 0;
+    -ms-transition: 0;
+    -o-transition: 0;
+    color: var(--button-color);
+    margin: 10px;
+}
+
+#navLogin:hover {
     background-color: var(--button-color);
     color: white;
-    border-color: var(--button-color);
+}
+
+.mynavlinks {
+    color: black;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
     transition: 0.6s;
     -webkit-transition: 0.6s;
     -moz-transition: 0.6s;
     -ms-transition: 0.6s;
     -o-transition: 0.6s;
-    border-radius: 15px;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    -ms-border-radius: 15px;
-    -o-border-radius: 15px;
-    padding: 8px;
+    margin-left: 10rem;
+    margin-right: 5rem;
 }
 
-#connectButton:hover {
-    background-color: var(--button-hover-color);
-    color: white;
-    border-color: var(--button-hover-color);
+.mynavlinks:hover {
+    color: var(--button-color);
+}
+
+#separator {
+    position: relative;
+
+}
+
+#banner {
+    background-image: url("../../public/images/mario-g573d29755_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 350px;
 }
 
 
@@ -133,7 +217,7 @@ h5 {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     margin-bottom: 2%;
-
+    text-align: center;
 }
 
 .containerform:hover {
@@ -166,16 +250,13 @@ h5 {
 
 #formdiv {
     margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 /* LOGIN INPUTS AND LABELS STYLE */
 #inputUid:focus {
     border-color: #17a2b8;
     box-shadow: none;
-}
-
-.loginLabel {
-    margin-left: 15px;
 }
 
 #inputUid {
@@ -207,6 +288,13 @@ h5 {
 
 #inputPwd::-webkit-input-placeholder {
     color: #a5a5a5;
+}
+
+#forgotPwd {
+    font-size: 0.8rem;
+    color: black;
+    font-weight: lighter;
+
 }
 
 /* LOGIN BUTTON */
@@ -293,12 +381,17 @@ h5 {
 
 
 .signup-form {
-    margin-top: 50px;
+    margin-top: 30px;
+    text-align: center;
 }
 
 #formdiv-signup {
     margin-bottom: 20px;
 
+}
+
+.SignupLabel {
+    margin-top: 10px;
 }
 
 /* User ID */
@@ -307,9 +400,6 @@ h5 {
     box-shadow: none;
 }
 
-.SignupLabel {
-    margin-left: 12px;
-}
 
 #SignupInputUid {
     border-width: 2px;

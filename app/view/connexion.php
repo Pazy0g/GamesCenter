@@ -14,7 +14,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../../public/styles/style.css">
 </head>
 
 <body>
@@ -33,7 +33,9 @@
                 <div class="form-group">
                     <label for="password" class="loginLabel">Mot de passe</label>
                     <input type="password" name="pwd" class="form-control loginInputs" id="inputPwd" placeholder="Mot de passe">
+                    <a href="#" id="forgotPwd">Mot de passe oublier ?</a>
                 </div>
+
                 <button type="submit" id="loginSubmit" class="btn btn-primary">Valider</button>
             </form>
             <p id="login-back"><a href="accueil.php">Revenir à l'accueil</a></p>
@@ -48,7 +50,7 @@
 
 
     </div>
-    <script src="../static/js/functions.js"></script>
+    <script src="../../public/js/functions.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

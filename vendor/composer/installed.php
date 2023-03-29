@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'games/prj',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '89c36eae5140db11b473d326b269888a93cd2a79',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'games/prj' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '89c36eae5140db11b473d326b269888a93cd2a79',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
