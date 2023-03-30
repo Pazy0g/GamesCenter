@@ -19,30 +19,26 @@
 
     <header>
 
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img src="../../public/images/gamescenternav.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link mynavlinks" aria-current="page" href="#">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mynavlinks" href="#">Listes des jeux</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mynavlinks" href="#">Les jeux populaires</a>
-                        </li>
-                    </ul>
-                </div>
-                <img id="separator" src="../../public/images/separator.png" alt="Séparateur">
-                <div class="d-flex align-items-center" id="navButtons">
-                    <a class="btn btn-outline" id="navSignup" href="inscription.php">M'inscrire</a>
-                    <a class="btn btn-outline" id="navLogin" href="connexion.php">Connexion</a>
-                </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" id="navLogo" href="#"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Liste des jeux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Les plus populaires</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">A propos</a>
+                    </li>
+                </ul>
             </div>
         </nav>
 
@@ -53,8 +49,8 @@
 
     <main>
         <section id="banner">
-            
-            <a class="btn btn-primary" href="#">Voir les plus populaires !</a>
+
+            <a class="btn btn-primary" id="ActionButton" href="#">Voir les plus populaires !</a>
 
 
         </section>

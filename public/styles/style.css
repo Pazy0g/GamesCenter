@@ -95,6 +95,7 @@ h5 {
 
 nav {
     animation: navEntrance 0.8s ease 0s 1 normal forwards;
+    background-color: white;
     -webkit-animation: navEntrance 0.8s ease 0s 1 normal forwards;
 }
 
@@ -110,6 +111,13 @@ nav {
     }
 }
 
+#navLogo {
+    background-image: url("../../public/images/gamescenternav2.png");
+
+    background-position: center;
+    width: 50px;
+    height: 35px;
+}
 
 
 
@@ -118,38 +126,33 @@ nav {
 
 /* Nav buttons */
 
-#navSignup {
-    background-color: var(--button-color);
-    border-color: var(--button-color);
+
+
+
+
+
+
+
+
+
+
+/* Main */
+
+#banner {
+    background-image: url("../../public/images/mario-g573d29755_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+}
+
+#ActionButton {
+    position: relative;
+    left: 45%;
+    top: 40%;
+    background-color: red;
+    border-color: red;
     border-radius: 20px;
-    width: 100%;
-    transition: 0.6s;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    -ms-transition: 0.6s;
-    -o-transition: 0.6s;
-    color: white;
 
-}
-
-#navSignup:hover {
-    background-color: transparent;
-    color: var(--button-hover-color);
-}
-
-#navButtons {
-    margin: 5px;
-}
-
-#navLogin {
-    background-color: transparent;
-    border-color: var(--button-color);
-    border-radius: 20px;
-    width: 100%;
     transition: 0.6s;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -159,45 +162,16 @@ nav {
     -moz-transition: 0;
     -ms-transition: 0;
     -o-transition: 0;
-    color: var(--button-color);
-    margin: 10px;
-}
-
-#navLogin:hover {
-    background-color: var(--button-color);
     color: white;
-}
-
-.mynavlinks {
-    color: black;
-    font-size: 1.2rem;
-    font-family: var(--font-family);
-    transition: 0.6s;
-    -webkit-transition: 0.6s;
-    -moz-transition: 0.6s;
-    -ms-transition: 0.6s;
-    -o-transition: 0.6s;
-    margin-left: 10rem;
-    margin-right: 5rem;
-}
-
-.mynavlinks:hover {
-    color: var(--button-color);
-}
-
-#separator {
-    position: relative;
+    margin: 10px;
 
 }
 
-#banner {
-    background-image: url("../../public/images/mario-g573d29755_1920.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 350px;
+#ActionButton:hover {
+    background-color: rgb(44, 44, 252);
+    color: white;
+    border-color: rgb(44, 44, 252);
 }
-
-
 
 
 /*===================================== LOGIN =====================================*/
