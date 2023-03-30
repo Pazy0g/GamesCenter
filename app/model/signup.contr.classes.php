@@ -1,4 +1,10 @@
 <?php
+
+
+namespace games\model;
+
+use games\model\Signup;
+
 class SignupContr extends Signup
 {
     private $uid;
@@ -18,27 +24,27 @@ class SignupContr extends Signup
     {
         if ($this->emptyInput() == false) {
             // echo "Empty input!";
-            header("Location: ../index.php?error=emptyinput");
+            header("Location: ../../index.php?error=emptyinput");
             exit();
         }
         if ($this->invalidUid() == false) {
             // echo "Invalid Username!";
-            header("Location: ../index.php?error=username");
+            header("Location: ../../index.php?error=username");
             exit();
         }
         if ($this->invalidEmail() == false) {
             // echo "Invalid Email!";
-            header("Location: ../index.php?error=email");
+            header("Location: ../../index.php?error=email");
             exit();
         }
         if ($this->pwdMatch() == false) {
             // echo "Passwords don't match!";
-            header("Location: ../index.php?error=passwordmatch");
+            header("Location: ../../index.php?error=passwordmatch");
             exit();
         }
         if ($this->uidTakenCheck() == false) {
             // echo "Username or email taken!";
-            header("Location: ../index.php?error=useroremailtaken");
+            header("Location: ../../index.php?error=useroremailtaken");
             exit();
         }
 

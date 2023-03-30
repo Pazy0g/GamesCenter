@@ -25,7 +25,7 @@
                 <i class="fa-sharp fa-regular fa-user"></i>
                 <h2>Connexion</h2>
             </div>
-            <form action="" method="post">
+            <form action="../controller/login.inc.php" method="post">
                 <div class="form-group" id="formdiv">
                     <label for="pseudo" class="loginLabel">Pseudo</label>
                     <input type="text" name="uid" class="form-control loginInputs" id="inputUid" placeholder="Pseudo">

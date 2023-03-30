@@ -1,5 +1,10 @@
 <?php
 // Définition de la classe LoginContr qui étend la classe Login
+
+namespace games\model;
+
+use games\model\login;
+
 class LoginContr extends Login
 {
     // Définition des propriétés privées $uid et $pwd
@@ -20,7 +25,7 @@ class LoginContr extends Login
         // Vérification si les champs du formulaire sont vides
         if ($this->emptyInput() == false) {
             // Redirection vers la page d'accueil avec le paramètre "error" défini sur "emptyinput"
-            header("Location: ../index.php?error=emptyinput");
+            header("Location: ../../index.php?error=emptyinput");
             // Arrête l'exécution du script
             exit();
         }

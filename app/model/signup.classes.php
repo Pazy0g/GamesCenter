@@ -1,6 +1,10 @@
 <?php
 
+namespace games\model;
+
 use games\model\Dbh;
+use PDO;
+use PDOException;
 
 class Signup extends Dbh
 {

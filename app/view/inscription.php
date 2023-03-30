@@ -27,7 +27,7 @@
                 <i class="fa-sharp fa-regular fa-user"></i>
                 <h2>Inscription</h2>
             </div>
-            <form action="" method="post">
+            <form action="../controller/signup.inc.php" method="post">
                 <div class="form-group" id="formdiv-signup">
                     <label for="pseudo" class="SignupLabel">Pseudo</label>
                     <input type="text" name="uid" class="form-control signupInputs" id="SignupInputUid" placeholder="Pseudo">
