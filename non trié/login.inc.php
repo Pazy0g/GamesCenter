@@ -2,8 +2,8 @@
 // Vérification si le formulaire a été soumis
 if (isset($_POST['submit'])) {
     // Récupération des données entrées par l'utilisateur
-    $uid = $_POST['uid'];
-    $pwd = $_POST['pwd'];
+    $uid = htmlspecialchars($_POST['uid']);
+    $pwd = htmlspecialchars($_POST['pwd']);
 
     // Inclusion des fichiers contenant les classes nécessaires
     include '../classes/dbh.classes.php';

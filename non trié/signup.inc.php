@@ -1,10 +1,10 @@
 <?php
 if (isset($_POST['submit'])) {
     // grabbing the datas
-    $uid = $_POST['uid'];
-    $pwd = $_POST['pwd'];
-    $pwdRepeat = $_POST['pwdrepeat'];
-    $email = $_POST['email'];
+    $uid = htmlspecialchars($_POST['uid']);
+    $pwd = htmlspecialchars($_POST['pwd']);
+    $pwdRepeat = htmlspecialchars($_POST['pwdrepeat']);
+    $email = htmlspecialchars($_POST['email']);
 
     // Instantiate SignupContr class
     include '../classes/dbh.classes.php';

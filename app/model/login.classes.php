@@ -1,13 +1,13 @@
 <?php
 
-
+use games\model\Dbh;
 
 class Login extends Dbh
 {
     protected function getUser($uid, $pwd)
     {
         // Prépare une requête pour récupérer le mot de passe de l'utilisateur correspondant à l'identifiant ou à l'adresse e-mail fourni
-        $stmt = $this->connect()->prepare('SELECT users_pwd 
+        $stmt = $this->connectDB()->prepare('SELECT users_pwd 
         FROM users WHERE users_uid
         = ? OR users_email = ?;');
 
@@ -41,7 +41,7 @@ class Login extends Dbh
 
         // Si le mot de passe est correct, prépare une requête pour récupérer toutes les données utilisateur et les stocke dans une variable de session
         elseif ($checkPwd == true) {
-            $stmt = $this->connect()->prepare('SELECT * 
+            $stmt = $this->connectDB()->prepare('SELECT * 
         FROM users WHERE (users_uid = ? 
         OR users_email = ?) 
         AND users_pwd = ?;');
