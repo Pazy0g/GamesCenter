@@ -26,7 +26,7 @@ class ComposerStaticIniteb7b58b916c1f9617cf630efe79039b3
         'G' => 
         array (
             'GrahamCampbell\\ResultType\\' => 26,
-            'Games\\Prj\\' => 10,
+            'Games\\' => 6,
         ),
         'D' => 
         array (
@@ -55,9 +55,9 @@ class ComposerStaticIniteb7b58b916c1f9617cf630efe79039b3
         array (
             0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
         ),
-        'Games\\Prj\\' => 
+        'Games\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
+            0 => __DIR__ . '/../..' . '/app',
         ),
         'Dotenv\\' => 
         array (

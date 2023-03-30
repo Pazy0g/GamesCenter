@@ -1,7 +1,7 @@
 <?php
 // Déclaration de la classe Dbh
 
-namespace Dbh\database;
+namespace games\model;
 
 use PDO;
 use PDOException;

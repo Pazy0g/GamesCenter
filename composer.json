@@ -5,7 +5,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Games\\Prj\\": "src/"
+            "Games\\": "app/"
         }
     },
     "authors": [
