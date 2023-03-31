@@ -5,16 +5,13 @@ namespace games\model;
 use games\model\Dbh;
 
 use PDO;
-use PDOException;
 
 class Login extends Dbh
 {
     protected function getUser($uid, $pwd)
     {
         // Prépare une requête pour récupérer le mot de passe de l'utilisateur correspondant à l'identifiant ou à l'adresse e-mail fourni
-        $stmt = $this->connectDB()->prepare('SELECT users_pwd 
-        FROM users WHERE users_uid
-        = ? OR users_email = ?;');
+        $stmt = $this->connectDB()->prepare('');
 
         // Vérifie si la requête n'a pas été exécutée avec succès, puis redirige vers la page d'accueil avec un message d'erreur approprié
         if (!$stmt->execute(array($uid, $uid))) {
@@ -46,10 +43,7 @@ class Login extends Dbh
 
         // Si le mot de passe est correct, prépare une requête pour récupérer toutes les données utilisateur et les stocke dans une variable de session
         elseif ($checkPwd == true) {
-            $stmt = $this->connectDB()->prepare('SELECT * 
-        FROM users WHERE (users_uid = ? 
-        OR users_email = ?) 
-        AND users_pwd = ?;');
+            $stmt = $this->connectDB()->prepare('');
 
             // Vérifie si la requête n'a pas été exécutée avec succès, puis redirige vers la page d'accueil avec un message d'erreur approprié
             if (!$stmt->execute(array($uid, $uid, $pwdHashed))) {

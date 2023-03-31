@@ -20,6 +20,7 @@ function SignupChecker() {
         let previousResponse = div.querySelectorAll(".response"); // Trouve tous les éléments créés avec la classe "response"
         for (let i = 0; i < previousResponse.length; i++) { // Boucle sur la liste des éléments
             div.removeChild(previousResponse[i]); // Supprime chacun des éléments trouvés
+
         }
     }
 
@@ -31,18 +32,28 @@ function SignupChecker() {
 
     if (pseudo.value.length > 0 && pseudo.value.length < 5) {
         let response = document.createElement("p");
+
         response.textContent = "Votre pseudo doit contenir au moins 5 caractères";
         response.style.fontSize = "12px";
         response.style.fontWeight = "bold";
         response.style.color = "red";
-        response.style.marginLeft = "15px";
+        response.classList.add("blockresponse");
+        pseudo.classList.add("errorinput");
+        pseudo.style.outline = "2px solid red";
+
         let previousResponse = div.querySelector(".response"); // Trouve le dernier élément créé avec la classe "response"
         if (previousResponse) {
             div.removeChild(previousResponse); // Supprime l'élément précédent s'il existe
+            response.classList.remove('blockreponse');
+            pseudo.classList.remove("errorinput");
+            pseudo.classList.remove("SignupInputUid:focus");
+
         }
         // Ajoute une classe pour faciliter la recherche ultérieure
         response.classList.add("response");
         div.appendChild(response);
+    } else {
+        pseudo.style.outline = "";
     }
 
 
@@ -65,11 +76,13 @@ function SignupChecker() {
         pwdResponse.style.fontSize = "12px";
         pwdResponse.style.fontWeight = "bold";
         pwdResponse.style.color = "red";
-        pwdResponse.style.marginLeft = "15px";
-
+        pwdResponse.classList.add("blockresponse");
+        password.style.outline = "2px solid red";
         // Ajouter une classe pour faciliter la recherche ultérieure
         pwdResponse.classList.add("pwdResponse");
         pwdDiv.appendChild(pwdResponse);
+    } else {
+        password.style.outline = "";
     }
 
 

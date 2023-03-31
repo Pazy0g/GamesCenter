@@ -36,8 +36,22 @@
                         <a class="nav-link" href="#">Les plus populaires</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">A propos</a>
+                        <a class="nav-link" href="inscription.php">Inscription</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="connexion.php">Connexion</a>
+                    </li>
+
+                    <!-- <?php if ($_SESSION == true) : ?>
+
+
+                        <?=
+                                '<li class="nav-item">
+                            <a class="nav-link" href="myprofile.php">Mon compte</a>
+                        </li>' ?>
+
+                    <?php endif; ?>
+                    ?> -->
                 </ul>
             </div>
         </nav>
@@ -72,9 +86,9 @@
                 <ul class="cards">
                     <li class="cards_item">
                         <div class="card">
-                            <a href="connexion.php">
+                            <a href="/">
                                 <div class="card_image">
-                                    <img src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S1_2560x1440-3659b5fe340f8fc073257975b20b7f84?h=270&quality=medium&resize=1&w=480" alt="mixed vegetable salad in a mason jar." />
+                                    <img loading="lazy" src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S1_2560x1440-3659b5fe340f8fc073257975b20b7f84?h=270&quality=medium&resize=1&w=480" alt="mixed vegetable salad in a mason jar." />
 
                                 </div>
                                 <div class="card_content">
@@ -96,9 +110,9 @@
 
                     <li class="cards_item">
                         <div class="card">
-                            <a href="connexion.php">
+                            <a href="/">
                                 <div class="card_image">
-                                    <img src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427" alt="a Reuben sandwich on wax paper." />
+                                    <img loading="lazy" src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427" alt="a Reuben sandwich on wax paper." />
 
                                 </div>
                                 <div class="card_content">
@@ -130,9 +144,9 @@
 
                     <li class="cards_item">
                         <div class="card">
-                            <a href="connexion.php">
+                            <a href="/">
                                 <div class="card_image">
-                                    <img src="https://img.gaming.gentside.com/sto/tags/jeux-video-61263f411d28b420d1458087_6691deb652ce075d4a6ad742.jpg" alt="des jeux " />
+                                    <img loading="lazy" src="https://img.gaming.gentside.com/sto/tags/jeux-video-61263f411d28b420d1458087_6691deb652ce075d4a6ad742.jpg" alt="des jeux " />
 
                                 </div>
                                 <div class="card_content">
@@ -164,20 +178,49 @@
         </section>
 
 
-
-        <div class="container-fluid bg-dark text-white">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-1 text-right p-5">
-                    <h2>Texte à droite</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget libero nec nibh suscipit ullamcorper.</p>
-                    <a href="#" class="btn btn-primary mt-4 mb-5">Voir plus</a>
+        <section id="aboutUs">
+            <div class="container-fluid bg-dark text-white">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-1 text-right p-5">
+                        <h2>Texte à droite</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget libero nec nibh suscipit ullamcorper.</p>
+                        <a href="#" class="btn btn-primary mt-4 mb-5">Voir plus</a>
+                    </div>
+                    <div class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
+                        <img src="https://picsum.photos/400/300" class="w-100 rounded-lg">
+                        <!-- Remplacez cette image par votre propre image -->
+                    </div>
                 </div>
-                <div class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
-                    <img src="https://picsum.photos/400/300" class="w-100 rounded-lg">
-                    <!-- Remplacez cette image par votre propre image -->
+            </div>
+        </section>
+
+
+
+        <div class="starUsers">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="../../public/images/gamescenternav2.png" alt="Image de profil" class="rounded-circle img-fluid mx-auto d-block" width="200px" height="200px">
+                    <h3 class="mt-4">Pseudonyme</h3>
+                    <p>Nombre de commentaires</p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="../../public/images/gamescenternav2.png" alt="Image de profil" class="rounded-circle img-fluid mx-auto d-block" width="200px" height="200px">
+                    <h3 class="mt-4">Pseudonyme</h3>
+                    <p>Nombre de commentaires</p>
+                </div>
+
+                <div class="col-md-4  text-center">
+                    <img src="../../public/images/gamescenternav2.png" alt="Image de profil" class="rounded-circle img-fluid mx-auto d-block" width="200px" height="200px">
+                    <h3 class="mt-4">Pseudonyme</h3>
+                    <p>Nombre de commentaires</p>
                 </div>
             </div>
         </div>
+
+
+
+
 
 
 

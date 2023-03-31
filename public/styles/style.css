@@ -196,7 +196,7 @@ main {
     background-image: url("../../public/images/jeuxfondbanner.jpg");
     background-size: cover;
     background-position: center;
-    height: 450px;
+    height: 1000px;
     width: 100%;
 }
 
@@ -236,6 +236,7 @@ main {
     background-image: url("../../public/images/fond.jpg");
     background-size: cover;
     background-position: center;
+
 }
 
 #TOP {
@@ -247,11 +248,17 @@ main {
 .main a {
     text-decoration: none;
     color: black;
+
 }
 
 .main {
     max-width: 1200px;
     margin: 0 auto;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
 }
 
 .cards {
@@ -381,6 +388,18 @@ hr {
     .cards_image {
         width: 33.3333%;
     }
+}
+
+
+
+#aboutUs {
+    background-color: #343A40;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.starUsers {
+    padding-top: 15px;
 }
 
 
@@ -598,6 +617,24 @@ hr {
     color: #a5a5a5;
 }
 
+.blockresponse {
+    background-color: #ffe6e6;
+    /* couleur de fond */
+    border: 1px solid #ff6666;
+    /* bordure rouge */
+    color: #ff6666;
+    /* couleur du texte */
+    padding: 5px;
+    /* espace intérieur de la boîte */
+    margin-top: 5px;
+    /* marge supérieure pour espacer la boîte de l'input */
+    font-size: 0.8rem;
+    /* taille de la police */
+}
+
+
+
+
 /* Email */
 
 #SignupInputEmail:focus {
@@ -627,6 +664,8 @@ hr {
     box-shadow: none;
 }
 
+
+
 #SignupInputPwd {
     border-width: 2px;
     border-radius: 20px;
@@ -634,6 +673,11 @@ hr {
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+
+#SignupInputPwd:focus {
+    border-color: #17a2b8;
+    box-shadow: none;
 }
 
 #SignupInputPwd::-webkit-input-placeholder {
