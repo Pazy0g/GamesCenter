@@ -40,11 +40,15 @@ class Signup extends Dbh
             exit();
         }
 
-        // Vérifie si le nombre de résultats renvoyés par la requête est supérieur à 0
+        /* 
+        Vérifie si le nombre de résultats renvoyés par la requête est supérieur à 0
+        si false l'utilisateur ne figure pas dans la base de données, si true il s'y trouve
+        */
+
         if ($stmt->rowCount() > 0) {
-            $resultCheck = false; // L'utilisateur existe déjà en base de données
+            $resultCheck = false;
         } else {
-            $resultCheck = true; // L'utilisateur n'existe pas encore en base de données
+            $resultCheck = true;
         }
 
         // Retourne le résultat de la vérification
