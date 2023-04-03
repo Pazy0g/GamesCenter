@@ -1,19 +1,110 @@
-<!doctype html>
-<html lang="fr">
-
-<head>
-    <title>GamesCenter - Mon compte</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../public/styles/style.css">
-</head>
+<?php require_once "layouts/head.php"; ?>
 
 <body>
+    <div class="container emp-profile">
+        <form method="post">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt="" />
+                        <div class="file btn btn-lg btn-primary">
+                            Modifier ma photo
+                            <input type="file" name="file" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="profile-head">
+                        <h5>
+                            Username
+                        </h5>
+                        <h6>
+                            User , Admin
+                        </h6>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">A propos de moi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2">
+
+                    <a href="#" id="profile-modify" data-target="#myModal" data-toggle="modal" class="btn"><span class="glyphicon glyphicon-user"></span> Modifier le profil</a>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="myModalLabel">Modifier mes informations</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Formulaire pour modifier les informations de l'utilisateur -->
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="pseudoInput">Pseudo:</label>
+                                            <input type="text" class="form-control" id="pseudoInput" placeholder="Entrez votre pseudo">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="emailInput">Adresse e-mail:</label>
+                                            <input type="email" class="form-control" id="emailInput" placeholder="Entrez votre adresse e-mail">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="passwordInput">Mot de passe:</label>
+                                            <input type="password" class="form-control" id="passwordInput" placeholder="Entrez votre mot de passe">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                                    <button type="submit" class="btn btn-primary">Enregistrer</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Pseudo</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>test</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Nom</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>test</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>test00test@test.com</p>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+
+
+                            </div>
+        </form>
+    </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

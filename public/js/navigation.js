@@ -1,6 +1,16 @@
 window.addEventListener("scroll", function () {
-    let navbar = document.querySelector(".navbar"); // Sélectionne l'élément HTML avec la classe "navbar"
+
+    /*
+    Récupération des éléments du DOM à manipuler
+    pour la barre de navigation
+    */
+    let navbar = document.querySelector(".navbar");
     let image = document.getElementById('navLogo');
+
+
+    /*
+    Ajout d'un timeout afin de rentre l'animation plus smooth
+    */
 
     setTimeout(() => {
         if (window.pageYOffset > 0) { // Vérifie si l'utilisateur a scrollé vers le bas
@@ -10,11 +20,16 @@ window.addEventListener("scroll", function () {
 
 
         } else {
+            /*
+             Remet le nav à son état d'origine lorsque l'utilisateur 
+             reviens tout en haut de la page
+           */
             navbar.classList.remove("scrolled"); // Supprime la classe "scrolled" de la navbar
             navbar.classList.add("navBack");
 
             image.classList.remove("navlogoscrolled");
         }
+        // 300ms avant le début de l'animation
     }, 300);
 
 });

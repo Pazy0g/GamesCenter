@@ -1,74 +1,12 @@
-<!doctype html>
-<html lang="fr">
+<?php require_once 'layouts/head.php'; ?>
+<main>
+    <section id="banner">
 
-<head>
-    <title>GamesCenter - Accueil</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../public/styles/style.css">
-</head>
-
-<body>
-
-    <header>
-
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <a class="navbar-brand" id="navLogo" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Liste des jeux</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Les plus populaires</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inscription.php">Inscription</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="connexion.php">Connexion</a>
-                    </li>
-
-                    <!-- <?php if ($_SESSION == true) : ?>
-
-
-                        <?=
-                                '<li class="nav-item">
-                            <a class="nav-link" href="myprofile.php">Mon compte</a>
-                        </li>' ?>
-
-                    <?php endif; ?>
-                    ?> -->
-                </ul>
-            </div>
-        </nav>
+        <h1 id="title">Games Center</h1>
 
 
 
-
-    </header>
-
-    <main>
-        <section id="banner">
-
-            <h1 id="title">Games Center</h1>
-            <a class="btn btn-primary" id="ActionButton" href="#">Voir les plus populaires !</a>
-
-
-        </section>
+    </section>
 
 
 
@@ -77,210 +15,158 @@
 
 
 
-        <section id="games">
+    <section id="games">
 
 
-            <h2 id="TOP">Notre TOP 3 !</h2>
+        <h2 id="TOP">Notre TOP 3 !</h2>
 
-            <div class="main">
-                <ul class="cards">
-                    <li class="cards_item">
-                        <div class="card">
-                            <a href="/">
-                                <div class="card_image">
-                                    <img loading="lazy" src="https://cdn1.epicgames.com/offer/0c40923dd1174a768f732a3b013dcff2/EGS_TheLastofUsPartI_NaughtyDogLLC_S1_2560x1440-3659b5fe340f8fc073257975b20b7f84?h=270&quality=medium&resize=1&w=480" alt="mixed vegetable salad in a mason jar." />
-
-                                </div>
-                                <div class="card_content">
-                                    <h2 class="card_title">Titre jeu 1</h2>
-                                    <div class="card_text">
-                                        <p>TOP 1<br>
-                                            Note moyenne :
-                                        </p>
-                                        <hr />
-                                        <p>Served with your choice of dressing on the side: <strong>housemade ranch</strong>, <strong>cherry balsamic
-                                                vinaigrette</strong>, <strong>creamy chipotle</strong>, <strong>avocado green goddess</strong>, or <strong>honey mustard</strong>. Add your choice
-                                            of protein for $2 more.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="cards_item">
-                        <div class="card">
-                            <a href="/">
-                                <div class="card_image">
-                                    <img loading="lazy" src="https://cdn.akamai.steamstatic.com/steam/apps/730/capsule_616x353.jpg?t=1641233427" alt="a Reuben sandwich on wax paper." />
-
-                                </div>
-                                <div class="card_content">
-                                    <h2 class="card_title">Titre jeu 2</h2>
-                                    <div class="card_text">
-                                        <p>
-                                            TOP 2 <br>
-                                            Note moyenne :
-                                        </p>
-                                        <hr />
-                                        <p>Every element of this extraordinary sandwich is handcrafted in our kitchens, from the rye
-                                            bread baked from our secret recipe to the cave-aged Swiss cheese, right down to the
-                                            pickle. The only thing we didn't make on the premises is the toothpick ( but we're
-                                            looking into how to do that).
-                                        </p>
-                                        <hr />
-                                        <p>This unforgettable sandwich has all of the classic Reuben elements: <strong>corned beef</strong>, <strong>rye
-                                                bread</strong>, <strong>creamy Russian dressing</strong>, <strong>sauerkraut</strong>, plus a <strong>sweet gherkin pickle</strong>.
-                                            No substitions please!
-                                        </p>
-                                        <p>Add a side of <strong>french fries</strong> or <strong>sweet potato fries</strong> for $2 more, or our
-                                            <strong>housemade pub chips</strong> for $1.
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-
-                    <li class="cards_item">
-                        <div class="card">
-                            <a href="/">
-                                <div class="card_image">
-                                    <img loading="lazy" src="https://img.gaming.gentside.com/sto/tags/jeux-video-61263f411d28b420d1458087_6691deb652ce075d4a6ad742.jpg" alt="des jeux " />
-
-                                </div>
-                                <div class="card_content">
-                                    <h2 class="card_title">Titre jeu 3</h2>
-                                    <div class="card_text">
-                                        <p>
-                                            TOP 3 <br>
-                                            Note moyenne :
-                                        </p>
-                                        <hr />
-                                        <p>
-                                            DESCRIPTION
-                                            ddqsdqsdsqdsqdqs
-                                            dqsdqsdqsdsqdsqdsqdsq
-                                            sqdqsdsqdsqdsqdqsdqsdsqdqsdsqdqsdqsd
-                                            sdqsdqsdqsdsqfgfdgfdgffgdfgdfgdfg
-                                            fdgfdgdfgdfgfdgdfgdfgdfg
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                    </li>
-                </ul>
-            </div>
-
-
-        </section>
-
-
-        <section id="aboutUs">
-            <div class="container-fluid bg-dark text-white">
-                <div class="row align-items-center">
-                    <div class="col-md-6 order-md-1 text-right p-5">
-                        <h2>Texte à droite</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget libero nec nibh suscipit ullamcorper.</p>
-                        <a href="#" class="btn btn-primary mt-4 mb-5">Voir plus</a>
+        <div class="wrap">
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="https://images.unsplash.com/photo-1622219809260-ce065fc5277f?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMwNjYxOQ&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">Kelsie Meyer</h3>
                     </div>
-                    <div class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
-                        <img src="https://picsum.photos/400/300" class="w-100 rounded-lg">
-                        <!-- Remplacez cette image par votre propre image -->
-                    </div>
+                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
+                <a href="#" class="button">Follow Kelsie</a>
             </div>
-        </section>
-
-
-
-        <div class="starUsers">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img src="../../public/images/gamescenternav2.png" alt="Image de profil" class="rounded-circle img-fluid mx-auto d-block" width="200px" height="200px">
-                    <h3 class="mt-4">Pseudonyme</h3>
-                    <p>Nombre de commentaires</p>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxNTMwNQ&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">Mark Carusso</h3>
+                    </div>
+                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-
-                <div class="col-md-4 text-center">
-                    <img src="../../public/images/gamescenternav2.png" alt="Image de profil" class="rounded-circle img-fluid mx-auto d-block" width="200px" height="200px">
-                    <h3 class="mt-4">Pseudonyme</h3>
-                    <p>Nombre de commentaires</p>
+                <a href="#" class="button">Follow Mark</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="https://images.unsplash.com/photo-1456885284447-7dd4bb8720bf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxNTQzNA&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">Taylor Green</h3>
+                    </div>
+                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-
-                <div class="col-md-4  text-center">
-                    <img src="../../public/images/gamescenternav2.png" alt="Image de profil" class="rounded-circle img-fluid mx-auto d-block" width="200px" height="200px">
-                    <h3 class="mt-4">Pseudonyme</h3>
-                    <p>Nombre de commentaires</p>
+                <a href="#" class="button">Follow Taylor</a>
+            </div>
+            <div class="box">
+                <div class="box-top">
+                    <img class="box-image" src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxNjA1MA&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
+                    <div class="title-flex">
+                        <h3 class="box-title">Isaiah Jian</h3>
+                    </div>
+                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
+                <a href="#" class="button">Follow Isaiah</a>
             </div>
         </div>
 
 
+    </section>
 
 
-
-
-
-
-
-
-    </main>
-
-
-
-
-
-
-
-
-
-
-
-
-    <footer class="bg-dark text-light py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Infos légales</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
+    <section id="aboutUs">
+        <div class="container-fluid bg-dark text-white">
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-1 text-right p-5">
+                    <h2>Texte à droite</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget libero nec nibh suscipit ullamcorper.</p>
+                    <a href="#" class="btn btn-primary mt-4 mb-5">Voir plus</a>
                 </div>
-                <div class="col-md-4">
-                    <h5>Nous contacter</h5>
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Pseudo</label>
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </form>
-                </div>
-                <div class="col-md-4 text-md-end">
-                    <p>&copy; 2023 GamesCenter</p>
+                <div class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
+                    <img src="https://picsum.photos/400/300" class="w-100 rounded-lg">
+                    <!-- Remplacez cette image par votre propre image -->
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Optional JavaScript -->
-    <script src="../../public/js/navigation.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="https://www.afjv.com/2023/03/230306-cloud-gaming-jeux-video.jpg" alt="Photo de l'utilisateur" class="rounded-circle img-fluid">
+                <h3>Nom de l'utilisateur 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac magna suscipit, posuere velit quis, vulputate eros.</p>
+            </div>
+            <div class="col-md-4 col-sm-6 text-center">
+                <img src="https://www.afjv.com/2023/03/230306-cloud-gaming-jeux-video.jpg" alt="Photo de l'utilisateur" class="rounded-circle img-fluid">
+                <h3>Nom de l'utilisateur 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac magna suscipit, posuere velit quis, vulputate eros.</p>
+            </div>
+            <div class="col-md-4 col-sm-12 text-center">
+                <img src="https://www.afjv.com/2023/03/230306-cloud-gaming-jeux-video.jpg" alt="Photo de l'utilisateur" class="rounded-circle img-fluid">
+                <h3>Nom de l'utilisateur 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac magna suscipit, posuere velit quis, vulputate eros.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-dark text-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Infos légales</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Nous contacter</h5>
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Pseudo</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+            <div class="col-md-4 text-md-end">
+                <p>&copy; 2023 GamesCenter</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<script src="../../public/js/navigation.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
