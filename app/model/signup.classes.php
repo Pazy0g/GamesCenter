@@ -11,7 +11,7 @@ class Signup extends Dbh
     protected function setUser($uid, $email, $pwd)
     {
         // Prépare la requête d'insertion en base de données avec des placeholders pour les valeurs à insérer
-        $stmt = $this->connectDB()->prepare('INSERT INTO users (username, email, password) VALUES (?,?,?);');
+        $stmt = $this->connectDB()->prepare('INSERT INTO users (username, email, pwd) VALUES (?,?,?);');
 
         // Hash le mot de passe avant de l'insérer en base de données
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);

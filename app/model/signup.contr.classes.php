@@ -43,7 +43,7 @@ class SignupContr extends Signup
             exit();
         }
 
-        $this->setUser($this->uid, $this->pwd, $this->email);
+        $this->setUser($this->uid, $this->email, $this->pwd);
     }
 
     private function emptyInput()
