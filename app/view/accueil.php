@@ -23,43 +23,43 @@
         <div class="wrap">
             <div class="box">
                 <div class="box-top">
-                    <img class="box-image" src="https://images.unsplash.com/photo-1622219809260-ce065fc5277f?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMwNjYxOQ&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
+                    <img class="box-image" src="https://static.fnac-static.com/multimedia/Images/FD/Comete/131251/CCP_IMG_ORIGINAL/1717677.jpg" alt="Girl Eating Pizza">
                     <div class="title-flex">
-                        <h3 class="box-title">Kelsie Meyer</h3>
+                        <h3 class="box-title"> Nom du jeu</h3>
                     </div>
                     <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Follow Kelsie</a>
+                <a href="#" class="button">Voir plus</a>
             </div>
             <div class="box">
                 <div class="box-top">
-                    <img class="box-image" src="https://images.unsplash.com/photo-1488161628813-04466f872be2?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxNTMwNQ&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
+                    <img class="box-image" src="https://images.midilibre.fr/api/v1/images/view/640b2037a16e23724e62a2ad/large/image.webp?v=1" alt="Girl Eating Pizza">
                     <div class="title-flex">
-                        <h3 class="box-title">Mark Carusso</h3>
+                        <h3 class="box-title">Nom du jeu</h3>
                     </div>
-                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                    <p class="description"> roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Follow Mark</a>
+                <a href="#" class="button">Voir plus</a>
             </div>
             <div class="box">
                 <div class="box-top">
                     <img class="box-image" src="https://images.unsplash.com/photo-1456885284447-7dd4bb8720bf?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxNTQzNA&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
                     <div class="title-flex">
-                        <h3 class="box-title">Taylor Green</h3>
+                        <h3 class="box-title">Nom du jeu</h3>
                     </div>
                     <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Follow Taylor</a>
+                <a href="#" class="button">Voir plus</a>
             </div>
             <div class="box">
                 <div class="box-top">
                     <img class="box-image" src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxNjA1MA&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
                     <div class="title-flex">
-                        <h3 class="box-title">Isaiah Jian</h3>
+                        <h3 class="box-title">Nom du jeu</h3>
                     </div>
                     <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Follow Isaiah</a>
+                <a href="#" class="button">Voir plus</a>
             </div>
         </div>
 

@@ -283,6 +283,10 @@ a {
     z-index: 4;
 }
 
+.box a {
+    text-decoration: none;
+}
+
 .box-top {
     display: flex;
     flex-direction: column;
@@ -314,6 +318,7 @@ a {
 }
 
 .button {
+    text-decoration: none;
     display: block;
     justify-content: center;
     align-items: center;
@@ -324,6 +329,7 @@ a {
     background: transparent;
     box-shadow: 0px 0px 0px 1px black inset;
     transition: background 0.4s ease;
+
 }
 
 .button:hover {
@@ -964,4 +970,25 @@ a {
 
 #profile-modify:hover {
     background-color: var(--button-hover-color);
+}
+
+
+#suprrAcc {
+    background-color: rgba(255, 0, 0, 0.545);
+    border-color: var(--button-color);
+    border-radius: 20px;
+    width: 100%;
+    transition: 0.6s;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+#suprrAcc:hover {
+    background-color: red;
 }

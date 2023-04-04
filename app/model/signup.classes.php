@@ -8,10 +8,10 @@ use PDOException;
 
 class Signup extends Dbh
 {
-    protected function setUser($uid, $pwd, $email)
+    protected function setUser($uid, $email, $pwd)
     {
         // Prépare la requête d'insertion en base de données avec des placeholders pour les valeurs à insérer
-        $stmt = $this->connectDB()->prepare('');
+        $stmt = $this->connectDB()->prepare('INSERT INTO users (username, email, password) VALUES (?,?,?);');
 
         // Hash le mot de passe avant de l'insérer en base de données
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
@@ -20,7 +20,7 @@ class Signup extends Dbh
         if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
             $stmt = null;
             // Redirige l'utilisateur vers la page d'accueil avec un message d'erreur en cas d'échec de l'exécution de la requête
-            header("Location: ../index.php?error=stmtfailed");
+            header("Location: ../view/index.php?error=stmtfailed");
             exit();
         }
         // Ferme la connexion à la base de données
@@ -30,13 +30,13 @@ class Signup extends Dbh
     protected function checkUser($uid, $email)
     {
         // Prépare la requête de sélection en base de données avec des placeholders pour les valeurs à sélectionner
-        $stmt = $this->connectDB()->prepare('');
+        $stmt = $this->connectDB()->prepare('SELECT username FROM users WHERE username = ? OR email = ?;');
 
         // Exécute la requête préparée en remplaçant les placeholders par les valeurs à sélectionner
         if (!$stmt->execute(array($uid, $email))) {
             $stmt = null;
             // Redirige l'utilisateur vers la page d'accueil avec un message d'erreur en cas d'échec de l'exécution de la requête
-            header("Location: ../index.php?error=stmtfailed");
+            header("Location: ../view/index.php?error=stmtfailed");
             exit();
         }
 
