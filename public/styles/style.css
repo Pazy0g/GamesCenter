@@ -119,10 +119,24 @@ h5 {
 /* Overall header animations */
 
 nav {
+    color: white;
     animation: navEntrance 0.8s ease 0s 1 normal forwards;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.822);
     -webkit-animation: navEntrance 0.8s ease 0s 1 normal forwards;
+    padding: 15px;
 }
+
+#nav-title {
+    font-family: var(--title-font-family);
+    font-size: 1.5rem;
+}
+
+.link {
+    font-size: 2rem;
+    padding: 5px;
+    text-align: center;
+}
+
 
 @keyframes navEntrance {
     0% {
@@ -146,20 +160,17 @@ nav {
     -o-transition: .3s;
 }
 
-#navLogo {
-    background-image: url("../../public/images/gamescenternav2.png");
-    background-position: center;
-    width: 50px;
-    height: 35px;
-}
 
 .navbar.scrolled {
+    color: black;
     background-color: #ffffffcc;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    scale: 0.95;
+    scale: 0.8;
     transition: all .3s ease-in-out;
-
-
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
 }
 
 .navbar.scrolled:hover {
@@ -189,16 +200,17 @@ nav li {
 
 
 
+
 /* Main */
 
 
 
 /* First banner & button */
 #banner {
-    background-image: url("../../public/images/jeuxfondbanner.jpg");
+    background-image: url("https://cdn.shopify.com/s/files/1/1183/1328/files/1_6408dca8-ff89-4cf4-ae78-af41265de1a5.jpg?v=1663224744");
     background-size: cover;
     background-position: center;
-    height: 1000px;
+    height: 1200px;
 }
 
 

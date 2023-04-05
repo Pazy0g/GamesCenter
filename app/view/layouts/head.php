@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../public/styles/style.css">
 </head>
@@ -65,30 +66,35 @@
             </div>
         </nav> -->
 
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <a class="navbar-brand" href="#">GAMES CENTER</a>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a id="nav-title" class="navbar-brand nav-logo" href="../../app/view/accueil.php"><img src="../../public/images/gamescenternav-removebg-preview.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Accueil<span class="sr-only">(current)</span></a>
+                    <li class="nav-item active link">
+                        <a class="nav-link" href="../../app/view/accueil.php">Accueil<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">À propos</a>
+                    <li class="nav-item link">
+                        <a class="nav-link" href="#">Liste des jeux</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contactez-nous</a>
+                    <li class="nav-item link">
+                        <a class="nav-link" href="#">Les plus populaires</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa-regular fa-user"></i> Mon compte</a>
+                        <a class="nav-link" id="loginNav" href="../../app/view/myprofile.php"> Connexion</a>
+                    </li>
+                    <li class="nav-item ml-2 mr-3">
+                        <a class="nav-link" id="signupNav" href="../../app/view/myprofile.php"> Inscription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../app/view/myprofile.php"><i class="fa-regular fa-user"></i> Mon compte</a>
                     </li>
                 </ul>
             </div>
         </nav>
-
 
     </header>

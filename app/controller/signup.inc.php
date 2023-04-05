@@ -21,4 +21,4 @@ if (isset($_POST['submit'])) {
     // Going back to the front page
 }
 
-header("Location: ../view/index.php");
+header("Location: ../../app/view/index.php");
