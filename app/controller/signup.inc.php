@@ -1,12 +1,13 @@
 <?php
 
+
 use games\model\SignupContr;
 
 if (isset($_POST['submit'])) {
     // grabbing the datas
     $uid = htmlspecialchars($_POST['uid']);
     $email = htmlspecialchars($_POST['email']);
-    $pwd = htmlspecialchars($_POST['pwd']);
+    $pwd = htmlspecialchars($_POST['password']);
 
     // Instantiate SignupContr class
     require '../model/dbh.classes.php';
@@ -16,7 +17,8 @@ if (isset($_POST['submit'])) {
     $signup = new SignupContr($uid, $email, $pwd);
 
     // Running error handlers and user signup
-    $signup->signupUser($uid, $email, $pwd);
+    $signup->signupUser();
     // Going back to the front page
-    header("Location: ../view/index.php");
 }
+
+header("Location: ../view/index.php");

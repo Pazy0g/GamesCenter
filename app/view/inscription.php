@@ -39,7 +39,7 @@
                 </div>
                 <div id="respPwd" class="form-group">
                     <label for="password" class="SignupLabel">Mot de passe</label>
-                    <input type="password" name="pwd" class="form-control loginInputs" id="SignupInputPwd" placeholder="Mot de passe">
+                    <input type="password" name="password" class="form-control loginInputs" id="SignupInputPwd" placeholder="Mot de passe">
                 </div>
                 <div class="form-check">
                     <label id="RGPDLABEL" class="form-check-label">

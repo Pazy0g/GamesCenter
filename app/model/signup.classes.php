@@ -17,7 +17,7 @@ class Signup extends Dbh
         $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
         // Exécute la requête préparée en remplaçant les placeholders par les valeurs à insérer
-        if (!$stmt->execute(array($uid, $hashedPwd, $email))) {
+        if (!$stmt->execute(array($uid, $email, $hashedPwd))) {
             $stmt = null;
             // Redirige l'utilisateur vers la page d'accueil avec un message d'erreur en cas d'échec de l'exécution de la requête
             header("Location: ../view/index.php?error=stmtfailed");

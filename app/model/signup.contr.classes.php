@@ -26,11 +26,11 @@ class SignupContr extends Signup
             header("Location: ../index.php?error=emptyinput");
             exit();
         }
-        if ($this->invalidUid() == false) {
-            // echo "Invalid Username!";
-            header("Location: ../index.php?error=username");
-            exit();
-        }
+        // if ($this->invalidUid() == false) {
+        //     // echo "Invalid Username!";
+        //     header("Location: ../index.php?error=username");
+        //     exit();
+        // }
         if ($this->invalidEmail() == false) {
             // echo "Invalid Email!";
             header("Location: ../index.php?error=email");
@@ -60,15 +60,15 @@ class SignupContr extends Signup
         return $result;
     }
 
-    private function invalidUid()
-    {
-        if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)) {
-            $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
-    }
+    // private function invalidUid()
+    // {
+    //     if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uid)) {
+    //         $result = false;
+    //     } else {
+    //         $result = true;
+    //     }
+    //     return $result;
+    // }
 
     private function invalidEmail()
     {

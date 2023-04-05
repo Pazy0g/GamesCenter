@@ -11,7 +11,9 @@ class Login extends Dbh
     protected function getUser($uid, $pwd)
     {
         // Prépare une requête pour récupérer le mot de passe de l'utilisateur correspondant à l'identifiant ou à l'adresse e-mail fourni
-        $stmt = $this->connectDB()->prepare('');
+        $stmt = $this->connectDB()->prepare('SELECT pwd 
+        FROM users WHERE username
+        = ? OR email = ?;');
 
         // Vérifie si la requête n'a pas été exécutée avec succès, puis redirige vers la page d'accueil avec un message d'erreur approprié
         if (!$stmt->execute(array($uid, $uid))) {
@@ -31,7 +33,7 @@ class Login extends Dbh
         }
 
         // Récupère le mot de passe haché de la base de données et vérifie si le mot de passe fourni est correct
-        $pwdHashed = $loginData[0]["users_pwd"];
+        $pwdHashed = $loginData[0]["pwd"];
         $checkPwd = password_verify($pwd, $pwdHashed);
 
         // Si le mot de passe est incorrect, redirige vers la page d'accueil avec un message d'erreur approprié
@@ -43,7 +45,9 @@ class Login extends Dbh
 
         // Si le mot de passe est correct, prépare une requête pour récupérer toutes les données utilisateur et les stocke dans une variable de session
         elseif ($checkPwd == true) {
-            $stmt = $this->connectDB()->prepare('');
+            $stmt = $this->connectDB()->prepare('SELECT *
+            FROM users WHERE (username = ? OR email = ?)
+            AND pwd =?;');
 
             // Vérifie si la requête n'a pas été exécutée avec succès, puis redirige vers la page d'accueil avec un message d'erreur approprié
             if (!$stmt->execute(array($uid, $uid, $pwdHashed))) {
@@ -55,8 +59,8 @@ class Login extends Dbh
             // Récupère toutes les données utilisateur sous forme de tableau associatif et les stocke dans des variables de session
             $loginData = $stmt->fetchAll(PDO::FETCH_ASSOC);
             session_start();
-            $_SESSION["userid"] = $loginData[0]["users_id"];
-            $_SESSION["useruid"] = $loginData[0]["users_uid"];
+            $_SESSION["userid"] = $loginData[0]["user_id"];
+            $_SESSION["username"] = $loginData[0]["username"];
 
             // Libère la variable de requête
             $stmt = null;

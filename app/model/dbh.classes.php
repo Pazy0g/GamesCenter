@@ -20,6 +20,7 @@ class Dbh
     $dbname = $_ENV['DB_NAME'];
     $user = $_ENV['DB_USER'];
     $password = $_ENV['DB_PASSWORD'];
+    $port = $_ENV['DB_PORT'];
 
 
     // Vérifie si une instance de connexion existe déjà
@@ -31,10 +32,9 @@ class Dbh
     } else {
       // Sinon, crée une nouvelle instance de connexion
 
-
       try {
         // Construit la chaîne de connexion pour PDO
-        $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8";
+        $dsn = "mysql:host=$host;dbname=$dbname;port=:$port;charset=utf8mb4_general_ci";
         // Crée une nouvelle instance de PDO avec les paramètres de connexion
         self::$instance = new PDO($dsn, $user, $password);
         // Configure PDO pour générer des exceptions en cas d'erreur
