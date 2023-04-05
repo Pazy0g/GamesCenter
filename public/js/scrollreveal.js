@@ -9,13 +9,14 @@ sr.reveal('h1', {
 sr.reveal('#gamesScroll', {
     origin: "left",
     distance: "1000px",
-    duration: 3000
+    duration: 2000,
+    reset: true
 });
 
 sr.reveal('.box-inner', {
     origin: "top",
     distance: "5px",
-    duration: 3500
+    duration: 2500
 });
 
 
