@@ -68,7 +68,7 @@
 
 
 body {
-    background-color: white;
+
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -119,9 +119,9 @@ h5 {
 /* Overall header animations */
 
 nav {
-    color: white;
+    color: black;
     animation: navEntrance 0.8s ease 0s 1 normal forwards;
-    background-color: rgba(0, 0, 0, 0.822);
+    background-color: rgb(255, 255, 255);
     -webkit-animation: navEntrance 0.8s ease 0s 1 normal forwards;
     padding: 15px;
 }
@@ -162,8 +162,8 @@ nav {
 
 
 .navbar.scrolled {
-    color: black;
-    background-color: #ffffffcc;
+    color: rgb(255, 255, 255);
+    background-color: #000000cc;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     scale: 0.8;
     transition: all .3s ease-in-out;
@@ -173,8 +173,16 @@ nav {
     -o-transition: all .3s ease-in-out;
 }
 
+@media (max-width: 992px) {
+    .navbar.scrolled {
+        color: black;
+        background-color: white;
+    }
+}
+
 .navbar.scrolled:hover {
     background-color: #ffffff;
+    color: black;
 }
 
 .navlogoscrolled {
@@ -204,13 +212,13 @@ nav li {
 /* Main */
 
 
-
+/* https://cdn.shopify.com/s/files/1/1183/1328/files/1_6408dca8-ff89-4cf4-ae78-af41265de1a5.jpg?v=1663224744 */
 /* First banner & button */
 #banner {
-    background-image: url("https://cdn.shopify.com/s/files/1/1183/1328/files/1_6408dca8-ff89-4cf4-ae78-af41265de1a5.jpg?v=1663224744");
+    background-image: url("https://wallpaperaccess.com/full/625497.jpg");
     background-size: cover;
     background-position: center;
-    height: 1200px;
+    height: 1000px;
 }
 
 
@@ -221,7 +229,7 @@ nav li {
     background-image: url("../../public/images/fond.jpg");
     background-size: cover;
     background-position: center;
-
+    padding-bottom: 25px;
 }
 
 #TOP {
@@ -462,20 +470,48 @@ a {
 
 #aboutUs {
     background-color: #343A40;
-    padding-bottom: 15px;
+    padding-bottom: 150px;
     padding-top: 15px;
 }
 
-/* Star user section */
+#about {
+    padding-top: 100px;
+    line-height: 10px;
+}
 
-.star {
-    font-family: var(--font-family);
+.aboutButton {
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-weight: bold;
+    margin-top: auto;
+    padding: 16px;
+    color: white;
+    background: rgb(66, 186, 150);
+    box-shadow: 0px 0px 0px 1px transparent inset;
+    transition: background 0.4s ease;
 }
 
-.starUsers {
-    padding-top: 15px;
+.aboutButton:hover {
+    background: hsl(240, 79%, 89%);
+    color: black;
+}
+
+/* Recent comment section */
+
+#container-break {
+    background-image: url("https://wallpaper.dog/large/20492411.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+}
+
+
+#recent-comments {
+    background-image: url("../../public/images/fond.jpg");
+    padding-bottom: 150px;
+    padding-top: 25px;
 }
 
 

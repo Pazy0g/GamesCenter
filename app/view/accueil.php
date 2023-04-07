@@ -19,7 +19,8 @@
     <section id="games">
 
 
-        <h2 id="TOP">Notre TOP 3 !</h2>
+        <h2 id="TOP">Notre TOP 4 !</h2>
+        <p class="text-center">Les meilleurs jeux choisis par la communautée</p>
 
         <div class="wrap" id="gamesScroll">
             <div class="box">
@@ -44,7 +45,7 @@
             </div>
             <div class="box">
                 <div class="box-top box-inner">
-                    <img class="box-image" src="" alt="Girl Eating Pizza">
+                    <img class="box-image" src="https://cdn-uploads.gameblog.fr/img/news/420990_64247f76d8703.jpg" alt="Girl Eating Pizza">
                     <div class="title-flex">
                         <h3 class="box-title">Nom du jeu</h3>
                     </div>
@@ -54,7 +55,7 @@
             </div>
             <div class="box">
                 <div class="box-top box-inner">
-                    <img class="box-image" src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyMzMxNjA1MA&ixlib=rb-1.2.1&q=85" alt="Girl Eating Pizza">
+                    <img class="box-image" src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0919/cDHU28ds7cCvKAnVQo719gs0.png" alt="Girl Eating Pizza">
                     <div class="title-flex">
                         <h3 class="box-title">Nom du jeu</h3>
                     </div>
@@ -69,15 +70,18 @@
 
 
     <section id="aboutUs">
-        <div class="container-fluid bg-dark text-white">
+        <div class="container-fluid bg-dark text-white" id="about">
             <div class="row align-items-center">
                 <div class="col-md-6 order-md-1 text-right p-5">
-                    <h2>Texte à droite</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget libero nec nibh suscipit ullamcorper.</p>
-                    <a href="#" class="btn btn-primary mt-4 mb-5">Voir plus</a>
+                    <h2 class="aboutText">Découvrez notre large collection de jeux</h2>
+                    <p class="text-white-50 aboutText">Nous sommes fiers de vous présenter notre large collection de jeux, conçue pour satisfaire les goûts de chacun. Que vous soyez fan de jeux de stratégie, de jeux de réflexion, de jeux d'action, ou même de jeux multijoueurs, vous trouverez forcément votre bonheur parmi nos titres.
+
+                        Notre collection est constamment mise à jour avec de nouveaux jeux, pour vous offrir une expérience toujours plus riche et variée.
+                    </p>
+                    <a href="#" class="btn mt-4 mb-5 aboutButton">Voir plus</a>
                 </div>
-                <div class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
-                    <img src="https://picsum.photos/400/300" class="w-100 rounded-lg">
+                <div id="aboutImage" class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
+                    <img src="https://cdn1.epicgames.com/offer/236c74b4cd2e4e3099cbe2ebdc9686fd/EGS_DeadIsland2_DeepSilverDambusterStudios_S1_2560x1440-fdc688ce46680914ee3c4a7949ce8a67" class="w-100 rounded-lg">
                     <!-- Remplacez cette image par votre propre image -->
                 </div>
             </div>
@@ -85,32 +89,61 @@
     </section>
 
 
-    <section class="container">
+    <div id="container-break">
+
+    </div>
+
+
+    <div class="container-fluid" id="recent-comments">
         <div class="row">
-            <div class="col-md-4 col-sm-6 text-center">
-                <img src="https://www.afjv.com/2023/03/230306-cloud-gaming-jeux-video.jpg" alt="Photo de l'utilisateur" class="rounded-circle img-fluid">
-                <h3>Nom de l'utilisateur 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac magna suscipit, posuere velit quis, vulputate eros.</p>
-            </div>
-            <div class="col-md-4 col-sm-6 text-center">
-                <img src="https://www.afjv.com/2023/03/230306-cloud-gaming-jeux-video.jpg" alt="Photo de l'utilisateur" class="rounded-circle img-fluid">
-                <h3>Nom de l'utilisateur 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac magna suscipit, posuere velit quis, vulputate eros.</p>
-            </div>
-            <div class="col-md-4 col-sm-12 text-center">
-                <img src="https://www.afjv.com/2023/03/230306-cloud-gaming-jeux-video.jpg" alt="Photo de l'utilisateur" class="rounded-circle img-fluid">
-                <h3>Nom de l'utilisateur 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac magna suscipit, posuere velit quis, vulputate eros.</p>
+            <div class="col-12">
+                <h3 class="text-center pb-5 pt-5 comment-title">Commentaires récents</h3>
+                <hr>
             </div>
         </div>
-    </section>
-
-
-
-
-
-
-
+        <div class="row">
+            <div class="col-md-6">
+                <div class="media comment-body-2">
+                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                    <div class="media-body comment-body-timing">
+                        <h5 class="mt-0">Nom du jeu 1</h5>
+                        <p>Pseudo</p>
+                        <p>Commentaire 1</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media comment-body-2">
+                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                    <div class="media-body comment-body-timing">
+                        <h5 class="mt-0">Nom du jeu 2</h5>
+                        <p>Pseudo</p>
+                        <p>Commentaire 2</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <div class="media comment-body-1">
+                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                    <div class="media-body comment-body-timing">
+                        <h5 class="mt-0">Nom du jeu 3</h5>
+                        <p>Pseudo</p>
+                        <p>Commentaire 3</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media comment-body-1">
+                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                    <div class="media-body comment-body-timing">
+                        <h5 class="mt-0">Nom du jeu 4</h5>
+                        <p>Pseudo</p>
+                        <p>Commentaire 4</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
 
 
 

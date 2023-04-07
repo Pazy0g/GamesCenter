@@ -5,7 +5,7 @@ window.addEventListener("scroll", function () {
     pour la barre de navigation
     */
     let navbar = document.querySelector(".navbar");
-    let image = document.getElementById('navLogo');
+    let image = document.getElementById('nav-title');
 
 
     /*
@@ -15,7 +15,7 @@ window.addEventListener("scroll", function () {
     if (window.pageYOffset > 0) { // Vérifie si l'utilisateur a scrollé vers le bas
 
         navbar.classList.add("scrolled"); // Ajoute la classe "scrolled" à la navbar
-        image.classList.add("navlogoscrolled");
+        image.style.display = "none";
 
 
     } else {
@@ -25,6 +25,7 @@ window.addEventListener("scroll", function () {
        */
         navbar.classList.remove("scrolled"); // Supprime la classe "scrolled" de la navbar
         navbar.classList.add("navBack");
+        image.style.display = "block";
 
         image.classList.remove("navlogoscrolled");
     }
