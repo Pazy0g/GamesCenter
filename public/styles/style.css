@@ -886,19 +886,235 @@ a {
 
 /* ============================ MON COMPTE =============================== */
 
-.profile-enter {
-    animation: Profile-enter 1.5s ease 0s 1 normal forwards;
-    -webkit-animation: Profile-enter 1.5s ease 0s 1 normal forwards;
+.profile-body {
+    background-image: url("https://images.alphacoders.com/186/186993.jpg");
 }
 
-@keyframes Profile-enter {
+
+.profile-parent {
+    padding-top: 150px;
+    animation: profile-parent-insert 1s ease 0s 1 normal forwards;
+
+}
+
+@keyframes profile-parent-insert {
     0% {
         opacity: 0;
-        transform: translateX(-250px);
+        transform: rotateX(70deg);
+        transform-origin: top;
     }
 
     100% {
         opacity: 1;
-        transform: translateX(0);
+        transform: rotateX(0deg);
+        transform-origin: top;
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
     }
+}
+
+
+
+.profile-container {
+    padding: 20px;
+    height: 750px;
+    width: 85%;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+
+
+}
+
+
+
+/* ==================================== PAGE JEU ================================= */
+
+
+.gamepage-container {
+    background-image: url("https://images4.alphacoders.com/109/109174.jpg");
+}
+
+
+#game-more-info {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    animation: Game-info-anim 1s ease 0s 1 normal forwards;
+    -webkit-animation: Game-info-anim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes Game-info-anim {
+    0% {
+        opacity: 0;
+        transform: rotateX(70deg);
+        transform-origin: top;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform-origin: top;
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+    }
+}
+
+.commentButton {
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    padding: 16px;
+    color: white;
+    background: rgb(66, 186, 150);
+    box-shadow: 0px 0px 0px 1px transparent inset;
+    transition: background 0.4s ease;
+}
+
+.commentButton:hover {
+    background: hsl(240, 79%, 89%);
+    color: black;
+}
+
+
+.glassmorphism {
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+#game-img-info {
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.comment-textarea {
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: transparent;
+    backdrop-filter: blur(1px);
+    border: none;
+    resize: none;
+    height: 150px;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+}
+
+.comment-textarea:focus {
+    border-color: hsl(240, 79%, 89%);
+}
+
+.saveButton {
+    margin-top: 15px;
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    width: 45%;
+    padding: 16px;
+    color: black;
+    background: hsl(240, 79%, 89%);
+    box-shadow: 0px 0px 0px 1px transparent inset;
+    transition: background 0.4s ease;
+    scale: 0.97;
+    margin: auto;
+}
+
+
+.saveButton:hover {
+    background: rgb(66, 186, 150);
+    color: white
+}
+
+.deleteButton {
+    margin-top: 15px;
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: auto;
+    width: 45%;
+    padding: 16px;
+    color: black;
+    background: transparent;
+    box-shadow: 0px 0px 0px 1px transparent inset;
+    transition: background 0.4s ease;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(5px);
+    scale: 0.97;
+    margin: auto;
+}
+
+.deleteButton:hover {
+    background: rgba(228, 15, 15, 0.753);
+    color: white
+}
+
+
+.buttonToggle {
+    animation: game-info-commen-toggle 0.6s ease 0s 1 normal forwards;
+    -webkit-animation: game-info-commen-toggle 0.6s ease 0s 1 normal forwards;
+}
+
+@keyframes game-info-commen-toggle {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+.text-areaToggle {
+    animation: game-info-text-toggle 0.6s ease 0s 1 normal forwards;
+    -webkit-animation: game-info-text-toggle 0.6s ease 0s 1 normal forwards;
+}
+
+@keyframes game-info-text-toggle {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+
+
+
+
+
+/* ========================== Liste jeux ================= */
+
+.gamelistconstr {
+    padding-top: 200px;
+    padding-bottom: 200px;
 }

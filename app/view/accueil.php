@@ -20,7 +20,7 @@
 
 
         <h2 id="TOP">Notre TOP 4 !</h2>
-        <p class="text-center">Les meilleurs jeux choisis par la communautée</p>
+        <p class="text-center">Le top des jeux choisis par la communautée</p>
 
         <div class="wrap" id="gamesScroll">
             <div class="box">
@@ -31,7 +31,7 @@
                     </div>
                     <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Voir plus</a>
+                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
             </div>
             <div class="box">
                 <div class="box-top">
@@ -41,7 +41,7 @@
                     </div>
                     <p class="description"> roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Voir plus</a>
+                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
             </div>
             <div class="box">
                 <div class="box-top box-inner">
@@ -51,7 +51,7 @@
                     </div>
                     <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Voir plus</a>
+                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
             </div>
             <div class="box">
                 <div class="box-top box-inner">
@@ -61,7 +61,7 @@
                     </div>
                     <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                 </div>
-                <a href="#" class="button">Voir plus</a>
+                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
 
                         Notre collection est constamment mise à jour avec de nouveaux jeux, pour vous offrir une expérience toujours plus riche et variée.
                     </p>
-                    <a href="#" class="btn mt-4 mb-5 aboutButton">Voir plus</a>
+                    <a href="../../app/view/gamelist.php" class="btn mt-4 mb-5 aboutButton">Voir plus</a>
                 </div>
                 <div id="aboutImage" class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
                     <img src="https://cdn1.epicgames.com/offer/236c74b4cd2e4e3099cbe2ebdc9686fd/EGS_DeadIsland2_DeepSilverDambusterStudios_S1_2560x1440-fdc688ce46680914ee3c4a7949ce8a67" class="w-100 rounded-lg">
@@ -159,41 +159,7 @@
 
 
 
-
-<footer class="bg-dark text-light py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h5>Infos légales</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-                <h5>Nous contacter</h5>
-                <form>
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Pseudo</label>
-                        <input type="text" class="form-control" id="name">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Envoyer</button>
-                </form>
-            </div>
-            <div class="col-md-4 text-md-end">
-                <p>&copy; 2023 GamesCenter</p>
-            </div>
-        </div>
-    </div>
-</footer>
+<?= require '../../app/view/layouts/footer.php'; ?>
 
 <!-- Optional JavaScript -->
 <script src="https://unpkg.com/scrollreveal"></script>
