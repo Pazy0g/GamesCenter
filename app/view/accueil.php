@@ -78,7 +78,7 @@
 
                         Notre collection est constamment mise à jour avec de nouveaux jeux, pour vous offrir une expérience toujours plus riche et variée.
                     </p>
-                    <a href="../../app/view/gamelist.php" class="btn mt-4 mb-5 aboutButton">Voir plus</a>
+                    <a href="../../app/view/gamelist.php" class="btn mt-4 mb-5 aboutButton">Voir tous les jeux</a>
                 </div>
                 <div id="aboutImage" class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
                     <img src="https://cdn1.epicgames.com/offer/236c74b4cd2e4e3099cbe2ebdc9686fd/EGS_DeadIsland2_DeepSilverDambusterStudios_S1_2560x1440-fdc688ce46680914ee3c4a7949ce8a67" class="w-100 rounded-lg">

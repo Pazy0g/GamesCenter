@@ -25,7 +25,7 @@ sr.reveal(".aboutText", {
     origin: "left",
     distance: "100px",
     duration: 2500,
-    reset: true
+    reset: false
 })
 
 sr.reveal(".aboutButton", {

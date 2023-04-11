@@ -10,7 +10,7 @@
     <div class="container text-light py-5 glassmorphism" id="game-more-info">
         <div class="row">
             <div id="game-img-info" class="col-md-6">
-                <img src="https://via.placeholder.com/600x400" class="img-fluid rounded">
+                <img src="https://via.placeholder.com/800x600" class="img-fluid rounded">
             </div>
             <div class="col-md-6">
                 <h2 class="text-black-50 font-weight-bold">Titre du jeu</h2>

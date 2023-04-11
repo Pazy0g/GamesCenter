@@ -887,7 +887,7 @@ a {
 /* ============================ MON COMPTE =============================== */
 
 .profile-body {
-    background-image: url("https://images.alphacoders.com/186/186993.jpg");
+    background-image: url("https://images5.alphacoders.com/570/570416.jpg");
 }
 
 
@@ -933,6 +933,12 @@ a {
 }
 
 
+#profile-card {
+    background-color: transparent;
+    width: 100%;
+}
+
+
 
 /* ==================================== PAGE JEU ================================= */
 
@@ -940,6 +946,7 @@ a {
 .gamepage-container {
     background-image: url("https://images4.alphacoders.com/109/109174.jpg");
 }
+
 
 
 #game-more-info {
