@@ -1,4 +1,5 @@
 <?php require_once "layouts/head.php"; ?>
+<?php require_once "layouts/header.php"; ?>
 
 <body class="profile-body">
 
@@ -86,8 +87,6 @@
             </div>
         </div>
     </div>
-
-
 
 
     <!-- Optional JavaScript -->

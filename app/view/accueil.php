@@ -1,153 +1,155 @@
 <?php require_once 'layouts/head.php'; ?>
-<!-- Scroll reveal script -->
-<main>
-    <section id="banner">
+<?php require_once 'layouts/header.php'; ?>
 
-        <h1 id="title">Games Center</h1>
+<body>
+    <main>
+        <section id="banner">
 
-
-
-    </section>
+            <h1 id="title">Games Center</h1>
 
 
 
-
+        </section>
 
 
 
 
-    <section id="games">
 
 
-        <h2 id="TOP">Notre TOP 4 !</h2>
-        <p class="text-center">Le top des jeux choisis par la communautée</p>
 
-        <div class="wrap" id="gamesScroll">
-            <div class="box">
-                <div class="box-top box-inner">
-                    <img class="box-image" src="https://static.fnac-static.com/multimedia/Images/FD/Comete/131251/CCP_IMG_ORIGINAL/1717677.jpg" alt="Girl Eating Pizza">
-                    <div class="title-flex">
-                        <h3 class="box-title"> Nom du jeu</h3>
+
+        <section id="games">
+
+
+            <h2 id="TOP">Notre TOP 4 !</h2>
+            <p class="text-center">Le top des jeux choisis par la communautée</p>
+
+            <div class="wrap" id="gamesScroll">
+                <div class="box">
+                    <div class="box-top box-inner">
+                        <img class="box-image" src="https://static.fnac-static.com/multimedia/Images/FD/Comete/131251/CCP_IMG_ORIGINAL/1717677.jpg" alt="Girl Eating Pizza">
+                        <div class="title-flex">
+                            <h3 class="box-title"> Nom du jeu</h3>
+                        </div>
+                        <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
                     </div>
-                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                    <a href="?action=gamepage" class="button">Voir plus</a>
                 </div>
-                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
+                <div class="box">
+                    <div class="box-top">
+                        <img class="box-image" src="https://images.midilibre.fr/api/v1/images/view/640b2037a16e23724e62a2ad/large/image.webp?v=1" alt="Girl Eating Pizza">
+                        <div class="title-flex">
+                            <h3 class="box-title">Nom du jeu</h3>
+                        </div>
+                        <p class="description"> roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                    </div>
+                    <a href="?action=gamepage" class="button">Voir plus</a>
+                </div>
+                <div class="box">
+                    <div class="box-top box-inner">
+                        <img class="box-image" src="https://cdn-uploads.gameblog.fr/img/news/420990_64247f76d8703.jpg" alt="Girl Eating Pizza">
+                        <div class="title-flex">
+                            <h3 class="box-title">Nom du jeu</h3>
+                        </div>
+                        <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                    </div>
+                    <a href="?action=gamepage" class="button">Voir plus</a>
+                </div>
+                <div class="box">
+                    <div class="box-top box-inner">
+                        <img class="box-image" src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0919/cDHU28ds7cCvKAnVQo719gs0.png" alt="Girl Eating Pizza">
+                        <div class="title-flex">
+                            <h3 class="box-title">Nom du jeu</h3>
+                        </div>
+                        <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                    </div>
+                    <a href="?action=gamepage" class="button">Voir plus</a>
+                </div>
             </div>
-            <div class="box">
-                <div class="box-top">
-                    <img class="box-image" src="https://images.midilibre.fr/api/v1/images/view/640b2037a16e23724e62a2ad/large/image.webp?v=1" alt="Girl Eating Pizza">
-                    <div class="title-flex">
-                        <h3 class="box-title">Nom du jeu</h3>
+
+
+        </section>
+
+
+        <section id="aboutUs">
+            <div class="container-fluid bg-dark text-white" id="about">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-1 text-right p-5">
+                        <h2 class="aboutText">Découvrez notre large collection de jeux</h2>
+                        <p class="text-white-50 aboutText">Nous sommes fiers de vous présenter notre large collection de jeux, conçue pour satisfaire les goûts de chacun. Que vous soyez fan de jeux de stratégie, de jeux de réflexion, de jeux d'action, ou même de jeux multijoueurs, vous trouverez forcément votre bonheur parmi nos titres.
+
+                            Notre collection est constamment mise à jour avec de nouveaux jeux, pour vous offrir une expérience toujours plus riche et variée.
+                        </p>
+                        <a href="?action=gamelist" class="btn mt-4 mb-5 aboutButton">Voir tous les jeux</a>
                     </div>
-                    <p class="description"> roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                    <div id="aboutImage" class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
+                        <img src="https://cdn1.epicgames.com/offer/236c74b4cd2e4e3099cbe2ebdc9686fd/EGS_DeadIsland2_DeepSilverDambusterStudios_S1_2560x1440-fdc688ce46680914ee3c4a7949ce8a67" class="w-100 rounded-lg">
+                        <!-- Remplacez cette image par votre propre image -->
+                    </div>
                 </div>
-                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
             </div>
-            <div class="box">
-                <div class="box-top box-inner">
-                    <img class="box-image" src="https://cdn-uploads.gameblog.fr/img/news/420990_64247f76d8703.jpg" alt="Girl Eating Pizza">
-                    <div class="title-flex">
-                        <h3 class="box-title">Nom du jeu</h3>
-                    </div>
-                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+        </section>
+
+
+        <div id="container-break">
+
+        </div>
+
+
+        <div class="container-fluid" id="recent-comments">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="text-center pb-5 pt-5 comment-title">Commentaires récents</h3>
+                    <hr>
                 </div>
-                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
             </div>
-            <div class="box">
-                <div class="box-top box-inner">
-                    <img class="box-image" src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0919/cDHU28ds7cCvKAnVQo719gs0.png" alt="Girl Eating Pizza">
-                    <div class="title-flex">
-                        <h3 class="box-title">Nom du jeu</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="media comment-body-2">
+                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <div class="media-body comment-body-timing">
+                            <h5 class="mt-0">Nom du jeu 1</h5>
+                            <p>Pseudo</p>
+                            <p>Commentaire 1</p>
+                        </div>
                     </div>
-                    <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                    <hr>
+                    <div class="media comment-body-2">
+                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <div class="media-body comment-body-timing">
+                            <h5 class="mt-0">Nom du jeu 2</h5>
+                            <p>Pseudo</p>
+                            <p>Commentaire 2</p>
+                        </div>
+                    </div>
+                    <hr>
                 </div>
-                <a href="../../app/view/gamepage.php" class="button">Voir plus</a>
+                <div class="col-md-6">
+                    <div class="media comment-body-1">
+                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <div class="media-body comment-body-timing">
+                            <h5 class="mt-0">Nom du jeu 3</h5>
+                            <p>Pseudo</p>
+                            <p>Commentaire 3</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="media comment-body-1">
+                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <div class="media-body comment-body-timing">
+                            <h5 class="mt-0">Nom du jeu 4</h5>
+                            <p>Pseudo</p>
+                            <p>Commentaire 4</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
             </div>
         </div>
 
 
-    </section>
 
-
-    <section id="aboutUs">
-        <div class="container-fluid bg-dark text-white" id="about">
-            <div class="row align-items-center">
-                <div class="col-md-6 order-md-1 text-right p-5">
-                    <h2 class="aboutText">Découvrez notre large collection de jeux</h2>
-                    <p class="text-white-50 aboutText">Nous sommes fiers de vous présenter notre large collection de jeux, conçue pour satisfaire les goûts de chacun. Que vous soyez fan de jeux de stratégie, de jeux de réflexion, de jeux d'action, ou même de jeux multijoueurs, vous trouverez forcément votre bonheur parmi nos titres.
-
-                        Notre collection est constamment mise à jour avec de nouveaux jeux, pour vous offrir une expérience toujours plus riche et variée.
-                    </p>
-                    <a href="../../app/view/gamelist.php" class="btn mt-4 mb-5 aboutButton">Voir tous les jeux</a>
-                </div>
-                <div id="aboutImage" class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
-                    <img src="https://cdn1.epicgames.com/offer/236c74b4cd2e4e3099cbe2ebdc9686fd/EGS_DeadIsland2_DeepSilverDambusterStudios_S1_2560x1440-fdc688ce46680914ee3c4a7949ce8a67" class="w-100 rounded-lg">
-                    <!-- Remplacez cette image par votre propre image -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <div id="container-break">
-
-    </div>
-
-
-    <div class="container-fluid" id="recent-comments">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center pb-5 pt-5 comment-title">Commentaires récents</h3>
-                <hr>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="media comment-body-2">
-                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
-                    <div class="media-body comment-body-timing">
-                        <h5 class="mt-0">Nom du jeu 1</h5>
-                        <p>Pseudo</p>
-                        <p>Commentaire 1</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="media comment-body-2">
-                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
-                    <div class="media-body comment-body-timing">
-                        <h5 class="mt-0">Nom du jeu 2</h5>
-                        <p>Pseudo</p>
-                        <p>Commentaire 2</p>
-                    </div>
-                </div>
-                <hr>
-            </div>
-            <div class="col-md-6">
-                <div class="media comment-body-1">
-                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
-                    <div class="media-body comment-body-timing">
-                        <h5 class="mt-0">Nom du jeu 3</h5>
-                        <p>Pseudo</p>
-                        <p>Commentaire 3</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="media comment-body-1">
-                    <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
-                    <div class="media-body comment-body-timing">
-                        <h5 class="mt-0">Nom du jeu 4</h5>
-                        <p>Pseudo</p>
-                        <p>Commentaire 4</p>
-                    </div>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </div>
-
-
-
-</main>
+    </main>
 
 
 
@@ -159,16 +161,16 @@
 
 
 
-<?= require '../../app/view/layouts/footer.php'; ?>
+    <?php require_once 'layouts/footer.php'; ?>
 
-<!-- Optional JavaScript -->
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="../../public/js/scrollreveal.js"></script>
-<script src="../../public/js/navigation.js"></script>
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Optional JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="public/js/scrollreveal.js"></script>
+    <script src="public/js/navigation.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

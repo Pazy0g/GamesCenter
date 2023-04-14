@@ -6,7 +6,7 @@ namespace games\model;
 use PDO;
 use PDOException;
 
-class Dbh
+abstract class Dbh
 {
 
   // Propriété statique pour stocker l'instance unique de la classe

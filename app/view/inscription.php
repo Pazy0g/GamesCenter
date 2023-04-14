@@ -1,23 +1,6 @@
-<!doctype html>
-<html lang="fr">
-
-<head>
-    <title>GamesCenter - Inscription</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../../public/styles/style.css">
-</head>
+<?php require_once 'layouts/head.php'; ?>
 
 <body>
-
     <div class="entering-form">
         <div class=" containerform login-form signup-form">
             <div class="imgContainer">
@@ -27,7 +10,7 @@
                 <i class="fa-sharp fa-regular fa-user"></i>
                 <h2>Inscription</h2>
             </div>
-            <form action="../controller/signup.inc.php" method="post">
+            <form action="?action=register" method="post">
                 <div class="form-group" id="formdiv-signup">
                     <label for="pseudo" class="SignupLabel">Pseudo</label>
                     <input type="text" name="uid" class="form-control signupInputs" id="SignupInputUid" placeholder="Pseudo">
@@ -39,7 +22,7 @@
                 </div>
                 <div id="respPwd" class="form-group">
                     <label for="password" class="SignupLabel">Mot de passe</label>
-                    <input type="password" name="password" class="form-control loginInputs" id="SignupInputPwd" placeholder="Mot de passe">
+                    <input type="password" name="pwd" class="form-control loginInputs" id="SignupInputPwd" placeholder="Mot de passe">
                 </div>
                 <div class="form-check">
                     <label id="RGPDLABEL" class="form-check-label">
@@ -49,17 +32,17 @@
                 </div>
                 <button type="submit" id="SignupSubmit" class="btn btn-primary">Valider</button>
 
-                <p id="Signup-back"><a href="accueil.php">Revenir à l'accueil</a></p>
+                <p id="Signup-back"><a href="?action=accueil">Revenir à l'accueil</a></p>
 
                 <div class="inscription-back">
                     <p id="con-back">Déjà inscrit ?
-                        <a href="connexion.php">se connecter</a>
+                        <a href="?action=connexion">se connecter</a>
                     </p>
                 </div>
             </form>
         </div>
 
-        <script src="../../public/js/SignupValidator.js"></script>
+        <script src="public/js/SignupValidator.js"></script>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
