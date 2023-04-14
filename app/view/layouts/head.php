@@ -6,7 +6,7 @@ require_once 'index.php';
 ?>
 
 <head>
-    <title>GamesCenter - <?php echo $title ?></title>
+    <title>GamesCenter</title>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">

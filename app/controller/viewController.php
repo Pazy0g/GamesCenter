@@ -65,4 +65,19 @@ class viewsController extends Controller
     {
         require_once $this->view('wrongdestination');
     }
+
+    public function registerUser()
+    {
+        require_once $this->controllerUserCon('userController');
+    }
+
+    public function loginUser()
+    {
+        require_once $this->controllerUserCon('userController');
+    }
+
+    public function deleteUser()
+    {
+        require_once $this->controllerUserCon('userController');
+    }
 }

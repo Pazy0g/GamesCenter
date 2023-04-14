@@ -45,7 +45,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form method="post" action="?action=delete">
                         <div class="form-group">
                             <label for="nom" class="col-form-label">pseudo:</label>
                             <input type="text" class="form-control" id="nom">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                    <a href="supprimer_compte.php" class="btn btn-danger">Supprimer</a>
+                    <a href="?action=delete" class="btn btn-danger">Supprimer</a>
                 </div>
             </div>
         </div>

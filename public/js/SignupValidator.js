@@ -1,8 +1,8 @@
 // Récupération des éléments du formulaire d'inscription
-let pseudo = document.getElementById('SignupInputUid');
-let email = document.getElementById("SignupInputEmail");
-let password = document.getElementById("SignupInputPwd");
-let button = document.getElementById("SignupSubmit");
+const pseudo = document.getElementById('SignupInputUid');
+const email = document.getElementById("SignupInputEmail");
+const password = document.getElementById("SignupInputPwd");
+const button = document.getElementById("SignupSubmit");
 
 
 

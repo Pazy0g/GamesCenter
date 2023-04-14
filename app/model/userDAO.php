@@ -2,6 +2,8 @@
 
 namespace games\model;
 
+use PDOException;
+
 class UserDAO extends Dbh
 {
     private $dbh;
@@ -13,17 +15,21 @@ class UserDAO extends Dbh
 
     public function save(User $user)
     {
-        $stmt = $this->dbh->prepare("INSERT INTO users (username, email, pwd) VALUES (?, ?, ?)");
-        $stmt->bindValue(1, $user->getUsername());
-        $stmt->bindValue(2, $user->getEmail());
-        $stmt->bindValue(3, password_hash($user->getPassword(), PASSWORD_DEFAULT));
-        $stmt->execute();
+        try {
+            $stmt = $this->dbh->prepare("INSERT INTO users (username, email, pwd) VALUES (?, ?, ?)");
+            $stmt->bindValue(1, $user->getUsername());
+            $stmt->bindValue(2, $user->getEmail());
+            $stmt->bindValue(3, password_hash($user->getPassword(), PASSWORD_DEFAULT));
+            $stmt->execute();
+        } catch (PDOException $e) {
+            die("Erreur lors de l'enregistrement de l'utilisateur dans la base de données: " . $e->getMessage());
+        }
     }
 
     public function delete(User $user)
     {
-        $stmt = $this->dbh->prepare("DELETE FROM users WHERE user_id = ?");
-        $stmt->bindValue(1, $user->getId());
+        $stmt = $this->dbh->prepare("DELETE FROM users WHERE username = ?");
+        $stmt->bindValue(1, $user->getUsername());
         $stmt->execute();
     }
 

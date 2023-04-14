@@ -4,13 +4,22 @@ namespace games\controller;
 
 class Controller
 {
+    const VIEW_PATH = 'app/view/';
+    const ADMIN_VIEW_PATH = 'app/view/admin/';
+    const CONTROLLER_PATH = 'app/controller/';
+
     public function view($view): string
     {
-        return 'app/view/' . $view . '.php';
+        return self::VIEW_PATH . $view . '.php';
     }
 
     public function viewAdmin($view): string
     {
-        return 'app/view/admin/' . $view . '.php';
+        return self::ADMIN_VIEW_PATH . $view . '.php';
+    }
+
+    public function controllerUserCon($control)
+    {
+        return self::CONTROLLER_PATH . $control . '.php';
     }
 }

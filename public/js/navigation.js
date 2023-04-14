@@ -1,35 +1,23 @@
-window.addEventListener("scroll", function () {
-
-    /*
+/*
     Récupération des éléments du DOM à manipuler
     pour la barre de navigation
-    */
-    let navbar = document.querySelector(".navbar");
-    let image = document.getElementById('nav-title');
+*/
+const navbar = document.querySelector(".navbar");
+const image = document.getElementById('nav-title');
 
-
-    /*
-    Ajout d'un timeout afin de rentre l'animation plus smooth
-    */
-
-    if (window.pageYOffset > 0) { // Vérifie si l'utilisateur a scrollé vers le bas
-
-        navbar.classList.add("scrolled"); // Ajoute la classe "scrolled" à la navbar
-        image.style.display = "none";
-
-
+//! Fonction pour animer la navbar lors du défilement
+function handleScroll() {
+    if (window.pageYOffset > 0) {
+        // Apply the scrolled styles when the user has scrolled down
+        navbar.classList.add("scrolled");
+        image.hidden = true;
     } else {
-        /*
-         Remet le nav à son état d'origine lorsque l'utilisateur 
-         reviens tout en haut de la page
-       */
-        navbar.classList.remove("scrolled"); // Supprime la classe "scrolled" de la navbar
+        // Reset the navbar styles when the user is at the top of the page
+        navbar.classList.remove("scrolled");
         navbar.classList.add("navBack");
-        image.style.display = "block";
-
+        image.hidden = false;
         image.classList.remove("navlogoscrolled");
     }
-    // 100ms avant le début de l'animation
+}
 
-
-});
+window.addEventListener("scroll", handleScroll);

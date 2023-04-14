@@ -5,22 +5,16 @@ namespace games\model;
 
 class User extends Dbh
 {
-    private $id;
+
     private $username;
     private $email;
-    private $password;
+    private $pwd;
 
-    public function __construct($id, $username, $email, $password)
+    public function __construct($username, $email, $pwd)
     {
-        $this->id = $id;
         $this->username = $username;
         $this->email = $email;
-        $this->password = $password;
-    }
-
-    public function getId()
-    {
-        return $this->id;
+        $this->pwd = $pwd;
     }
 
     public function getUsername()
@@ -35,7 +29,7 @@ class User extends Dbh
 
     public function getPassword()
     {
-        return $this->password;
+        return $this->pwd;
     }
 
     public function setUsername($username)
@@ -48,26 +42,8 @@ class User extends Dbh
         $this->email = $email;
     }
 
-    public function setPassword($password)
+    public function setPassword($pwd)
     {
-        $this->password = $password;
-    }
-
-    public function save()
-    {
-        // Code pour enregistrer l'utilisateur dans la base de données
-        // Ici, vous pouvez utiliser une connexion PDO pour effectuer des requêtes SQL
-    }
-
-    public static function getByUsername($username)
-    {
-        // Code pour récupérer un utilisateur à partir de son nom d'utilisateur
-        // Ici, vous pouvez utiliser une connexion PDO pour effectuer des requêtes SQL
-    }
-
-    public static function getByEmail($email)
-    {
-        // Code pour récupérer un utilisateur à partir de son adresse email
-        // Ici, vous pouvez utiliser une connexion PDO pour effectuer des requêtes SQL
+        $this->pwd = $pwd;
     }
 }

@@ -17,55 +17,31 @@ $dotenv->load();
 $frontController = new \games\controller\viewsController();
 // -------- Vérification dans le cas où il y a une action, sinon on retourne la page home --------
 
-$title = 'Accueil';
+$actionList = [
+    'inscription' => 'inscription',
+    'connexion' => 'connexion',
+    'compte' => 'compte',
+    'gamepage' => 'game',
+    'gamelist' => 'listGames',
+    'addgame' => 'addGames',
+    'popular' => 'popularGames',
+    'about' => 'about',
+    'accueil' => 'home',
+    'register' => 'registerUser',
+    'login' => 'loginUser',
+    'delete' => 'deleteUser'
+];
 
-if (isset($_GET['action'])) {
-    switch ($_GET['action']) {
-        case 'inscription':
-            $frontController->inscription();
-            $title = 'inscription';
-            break;
-        case 'connexion':
-            $frontController->connexion();
-            $title = 'connexion';
-            break;
-        case 'compte':
-            $frontController->compte();
-            $title = 'Mon compte';
-            break;
-        case 'gamepage':
-            $frontController->game();
-            // $title = $gameName;
-            break;
-        case 'gamelist':
-            $frontController->listGames();
-            $title = 'Liste des jeux';
-            break;
-        case 'addgame':
-            $frontController->addGames();
-            $title = 'Ajouter un jeu';
-            break;
-        case 'popular':
-            $frontController->popularGames();
-            $title = 'Les plus populaires';
-            break;
-        case 'about':
-            $frontController->about();
-            $title = 'A propos';
-            break;
-        case 'accueil':
-            $frontController->home();
-            $title = 'Accueil';
-            break;
-        default:
-            $frontController->errorPage();
-            $title = 'OOPS';
-            break;
-    }
+// Action par défaut si aucune action n'est encore définie
+$defaultAction = 'home';
+
+if (isset($_GET['action']) && array_key_exists($_GET['action'], $actionList)) {
+    $methodName = $actionList[$_GET['action']];
+    $frontController->$methodName();
 } else {
-    $frontController->home();
-    $title = 'Accueil';
-} 
+
+    $frontController->$defaultAction();
+}
 
         /* ----------------------------------------------------------------
       -------------------- Gestion de la Connexion ----------------------

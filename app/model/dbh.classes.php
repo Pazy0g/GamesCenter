@@ -6,6 +6,10 @@ namespace games\model;
 use PDO;
 use PDOException;
 
+
+require_once 'index.php';
+
+
 abstract class Dbh
 {
 
@@ -34,7 +38,8 @@ abstract class Dbh
 
       try {
         // Construit la chaîne de connexion pour PDO
-        $dsn = "mysql:host=$host;dbname=$dbname;port=:$port;charset=utf8mb4_general_ci";
+
+        $dsn = "mysql:host=$host;dbname=$dbname;port=:$port;charset=utf8";
         // Crée une nouvelle instance de PDO avec les paramètres de connexion
         self::$instance = new PDO($dsn, $user, $password);
         // Configure PDO pour générer des exceptions en cas d'erreur
