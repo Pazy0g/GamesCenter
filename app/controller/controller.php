@@ -17,9 +17,4 @@ class Controller
     {
         return self::ADMIN_VIEW_PATH . $view . '.php';
     }
-
-    public function controllerUserCon($control)
-    {
-        return self::CONTROLLER_PATH . $control . '.php';
-    }
 }

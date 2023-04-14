@@ -3,47 +3,104 @@
 
 namespace games\model;
 
-class User extends Dbh
+class Users extends Dbh
 {
-
-    private $username;
-    private $email;
-    private $pwd;
-
-    public function __construct($username, $email, $pwd)
+    // --------------- Requête pour enregister un user ---------------
+    public function createUser(string $username, string $email, string $password, $user_image = null, $is_admin = 0): void
     {
-        $this->username = $username;
-        $this->email = $email;
-        $this->pwd = $pwd;
+        $db = self::connectDB();
+
+        $req = $db->prepare(
+            "INSERT INTO 
+        users(
+          username, 
+          email,
+          password,
+          user_image,
+          is_admin
+        ) 
+      VALUES (:username, :email, :password, :user_image, :is_admin)"
+        );
+
+        $req->execute([
+            ':username' => $username,
+            ':email' => $email,
+            ':password' => password_hash($password, PASSWORD_DEFAULT),
+            ':user_image' => $user_image,
+            ':is_admin' => $is_admin
+        ]);
     }
 
-    public function getUsername()
+    // --------------- Requête pour se connecter ---------------
+    public static function login(string $username): mixed
     {
-        return $this->username;
+        $db = self::connectDB();
+
+        $req = $db->prepare("SELECT user_id, username, password, is_admin FROM users WHERE username = :username");
+        $req->execute([':username' => $username]);
+
+        return $req->fetch();
     }
 
-    public function getEmail()
+
+    // --------------- Requête pour mettre à jour un user ---------------
+    public function updateUser($username, $email, $user_id): void
     {
-        return $this->email;
+        $db = self::connectDB();
+
+        $req = $db->prepare(
+            "UPDATE users SET 
+        username = :username,
+        email = :email
+      WHERE user_id = :user_id"
+        );
+
+        $req->execute([
+            ':username' => $username,
+            ':email' => $email,
+            ':user_id' => $user_id
+        ]);
     }
 
-    public function getPassword()
+    // --------------- Requête pour supprimer un user ---------------
+    public function deleteUser($user_id): void
     {
-        return $this->pwd;
+        $db = self::connectDB();
+
+        $req = $db->prepare("DELETE FROM users WHERE user_id = :user_id");
+        $req->execute([':user_id' => $user_id]);
     }
 
-    public function setUsername($username)
+    // --------------- Requête pour récupérer tous les users ---------------
+    public function getAllUsers(): array
     {
-        $this->username = $username;
+        $db = self::connectDB();
+
+        $req = $db->prepare("SELECT user_id, username, email, user_image, is_admin FROM users");
+        $req->execute();
+
+        return $req->fetchAll();
     }
 
-    public function setEmail($email)
+    // --------------- Requête pour récupérer un user par rapport à son id ---------------
+    public static function getUserById($user_id): array
     {
-        $this->email = $email;
+        $db = self::connectDB();
+
+        $req = $db->prepare("SELECT * FROM users WHERE user_id = :user_id");
+        $req->execute([':user_id' => $user_id]);
+
+        return $req->fetch();
     }
 
-    public function setPassword($pwd)
+    // --------------- Requête pour savoir le nombre d'utilisateurs ---------------
+    public static function countUsers(): array
     {
-        $this->pwd = $pwd;
+        $db = self::connectDB();
+
+        $req = $db->prepare("SELECT COUNT(user_id) AS nb FROM users");
+        $req->execute();
+
+        return $req->fetch();
     }
 }

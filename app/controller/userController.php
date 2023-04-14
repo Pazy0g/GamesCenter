@@ -1,67 +1,66 @@
 <?php
 
+namespace games\controller;
 
-use games\model\User;
-use games\model\UserDAO;
+use games\controller\Controller;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['action']) && $_POST['action'] === 'register') {
-        // Récupération des données du formulaire d'inscription
-        $username = htmlspecialchars($_POST['uid']);
-        $email = htmlspecialchars($_POST['email']);
-        $pwd = password_hash(htmlspecialchars($_POST['pwd']), PASSWORD_DEFAULT);
+class Users extends Controller
+{
+    // ----------- Permet de se connecter -----------
+    public function connexionPage(): void
+    {
+        require_once $this->view('auth/login');
+    }
 
-        // Création d'un nouvel utilisateur
-        $user = new User($username, $email, $pwd);
+    // -------- connexion à son compte --------
+    public function loginPost(string $username, string $password): void
+    {
+        $login = \games\model\Users()::login($username);
 
-        // Enregistrement de l'utilisateur dans la base de données
-        $userDAO = new UserDAO();
-        $userDAO->save($user);
+        if (password_verify($password, $login['password'])) {
+            $_SESSION['mail'] = $login['mail'];
+            $_SESSION['id'] = $login['id'];
+            $_SESSION['pseudo'] = $login['pseudo'];
+            $_SESSION['id_roles'] = $login['id_roles'];
 
-        // Redirection vers la page de connexion
-        header('Location: ../view/connexion.php');
-        exit;
-    } elseif (isset($_POST['action']) && $_POST['action'] === 'login') {
-        // Récupération des données du formulaire de connexion
-        $username = htmlspecialchars($_POST['uid']);
-        $pwd = htmlspecialchars($_POST['pwd']);
-
-        // Récupération de l'utilisateur correspondant au nom d'utilisateur
-        $userDAO = new UserDAO();
-        $user = $userDAO->getByUsername($username);
-
-        // Vérification du mot de passe
-        if ($user && password_verify($pwd, $user->getPassword())) {
-            // Authentification réussie
-            // Création d'une session utilisateur
-            session_start();
-            $_SESSION['username'] = $user->getUsername();
-
-            // Redirection vers la page d'accueil
-            header('Location: ../view/index.php');
-            exit;
+            header('Location:/dashboard.php');
         } else {
-            // Authentification échouée
-            // Affichage d'un message d'erreur
-            $error_message = "Nom d'utilisateur ou mot de passe incorrect";
+            require_once $this->view('errors/oops');
         }
-    } elseif (isset($_POST['action']) && $_POST['action'] === 'delete') {
-        // Vérification de l'existence de la variable de session
-        if (isset($_SESSION['username'])) {
-            // Récupération de l'utilisateur correspondant au nom d'utilisateur
-            $userDAO = new UserDAO();
-            $user = $userDAO->getByUsername($_SESSION['username']);
+    }
 
-            // Suppression de l'utilisateur de la base de données
-            $userDAO->delete($user);
+    // -------- enregistrement dans la db des informations pour création d'un compte --------
+    public function addUser(string $pseudo, string $mail, string $password, int $id_roles = null): void
+    {
+        $user = new \games\model\Users();
 
-            // Déconnexion de l'utilisateur
-            session_start();
-            session_destroy();
+        $user->createUser($pseudo, $mail, $password, $id_roles);
+        require_once $this->view('users/register-confirm');
+    }
 
-            // Redirection vers la page d'accueil
-            header('Location: ../view/index.php');
-            exit;
-        }
+    // -------- mise à jour d'un utilisateur par rapport à son id --------
+    public function updateUserPost(string $pseudo, string $mail, int $id): void
+    {
+        $user = new \games\model\Users();
+
+        $user->updateUser($pseudo, $mail, $id);
+
+        header('Location:dashboard.php?action=users');
+    }
+
+    // -------- suppression d'un utilisateur par rapport à son id --------
+    public function deleteUser(int $id): void
+    {
+        $user = new \games\model\Users();
+        $user->deleteUser($id);
+
+        header('Location:dashboard.php?action=users');
+    }
+
+    // -------- gestion et verification de la connexion --------
+    public function deconnexion(): void
+    {
+        session_destroy();
+        header('Location:/');
     }
 }
