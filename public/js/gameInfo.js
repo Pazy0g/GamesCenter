@@ -1,8 +1,8 @@
-// Creation d'un textarea
+// Création d'un textarea
 const textarea = document.createElement("textarea");
 textarea.hidden = true;
 
-// Récuperer le première élément avec la classe "commentButton"
+// Récupérer le premier élément avec la classe "commentButton"
 const buttonComment = document.querySelector(".commentButton");
 document.querySelector('.comment-area').appendChild(textarea);
 
@@ -15,36 +15,47 @@ function createButton(text, classes, onClick) {
     return button;
 }
 
-//! Définition une fonction pour afficher le textarea et remplacer le bouton commentaire
+//! Définition d'une fonction pour afficher le textarea et remplacer le bouton commentaire
 function showTextarea() {
-    // Afficher le text area
+    // Vérifier si le textarea est déjà visible
+    if (!textarea.hidden) return;
+
+    // Afficher le textarea
     textarea.hidden = false;
 
-    // Remplacement du bouton commentaire par deux nouveaux boutons
-    const saveButton = createButton("Enregistrer", ["saveButton"], () => { });
-    const deleteButton = createButton("Annuler", ["deleteButton"], () => {
-        // Cacher le text area et supprimer les boutons
+    // Créer les boutons pour valider ou annuler le commentaire
+    const saveButton = createButton("Enregistrer", ["saveButton"], () => {
+        // Enregistrer le commentaire
+        console.log("Commentaire enregistré");
+
+        // Cacher le textarea et supprimer les boutons
         textarea.hidden = true;
         saveButton.remove();
         deleteButton.remove();
 
-
+        // Remplacer les boutons par le bouton "Laisser un commentaire"
         const buttonReplace = createButton("Laisser un commentaire", ["commentButton"], showTextarea);
         document.querySelector(".button-area").appendChild(buttonReplace);
     });
 
-    // Ajouter le nouveau bouton
+    const deleteButton = createButton("Annuler", ["deleteButton"], () => {
+        // Cacher le textarea et supprimer les boutons
+        textarea.hidden = true;
+        saveButton.remove();
+        deleteButton.remove();
+
+        // Remplacer les boutons par le bouton "Laisser un commentaire"
+        const buttonReplace = createButton("Laisser un commentaire", ["commentButton"], showTextarea);
+        document.querySelector(".button-area").appendChild(buttonReplace);
+    });
+
+    // Ajouter les nouveaux boutons
     document.querySelector('.button-area').appendChild(saveButton);
     document.querySelector('.button-area').appendChild(deleteButton);
 
-    // Retirer le bouton par défaut
+    // Retirer le bouton "Laisser un commentaire"
     buttonComment.remove();
 }
 
 //* Event Listeners
 buttonComment.addEventListener("click", showTextarea);
-
-
-const buttonReplace = createButton("Laisser un commentaire", ["commentButton"], showTextarea);
-buttonReplace.addEventListener("click", showTextarea);
-document.querySelector('.button-area').appendChild(buttonReplace);

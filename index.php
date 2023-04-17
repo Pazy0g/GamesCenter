@@ -1,21 +1,19 @@
 <?php
-
-include_once 'app/view/layouts/head.php';
-require_once __DIR__ . '/vendor/autoload.php';
-
 if (!isset($_SESSION)) {
     session_start();
 }
 
-use Dotenv\Dotenv;
+require_once __DIR__ . '/vendor/autoload.php';
 
-require_once 'app/controller/viewController.php';
-$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-// -------- Récupération des Controllers --------
-$frontController = new \games\controller\viewsController();
-// -------- Vérification dans le cas où il y a une action, sinon on retourne la page home --------
+use Games\controller\ViewsController;
+
+// Récupération des Controllers
+$frontController = new ViewsController();
+
+// Vérification dans le cas où il y a une action, sinon on retourne la page home 
 
 $actionList = [
     'inscription' => 'inscription',
@@ -29,7 +27,7 @@ $actionList = [
     'accueil' => 'home',
     'register' => 'register',
     'login' => 'loginUser',
-    'delete' => 'deleteUser'
+    'deconnexion' => 'deconnexion'
 ];
 
 // Action par défaut si aucune action n'est encore définie

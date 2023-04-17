@@ -1,20 +1,15 @@
 <?php
 // UserController.php
 
-namespace games\controller;
+namespace Games\controller;
 
-use games\model\User;
+use Games\model\User;
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
 class UserController
 {
     public function register()
     {
         if (isset($_POST['submit'])) {
-            $error = '';
-            echo 'post send';
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Récupère les données du formulaire d'inscription
                 $username = htmlspecialchars($_POST['uid'], ENT_QUOTES, 'UTF-8');
@@ -39,13 +34,13 @@ class UserController
                 else {
                     $user = new User($username, $email, $password);
                     $user->save();
-                    header('Location:/?action=connexion');
+                    header('Location: ?action=connexion');
                     exit();
                 }
             }
 
             // Charge la vue d'inscription en lui passant éventuellement un message d'erreur
-            include '/app/view/inscription.php';
+            include  'app/view/inscription.php';
         }
     }
 
@@ -56,29 +51,28 @@ class UserController
             $username = htmlspecialchars($_POST['uid'], ENT_QUOTES, 'UTF-8');
             $password = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
 
-            // Récupère l'utilisateur correspondant à l'adresse e-mail donnée
+            // Récupère l'utilisateur correspondant à l'aide de l'username
             $user = User::findByUsername($username);
-
             // Vérifie que l'utilisateur existe et que le mot de passe est correct
             if ($user && $user->checkPassword($password)) {
                 // Stocke l'utilisateur en session pour le connecter
                 $_SESSION['user_id'] = $user->getUserId();
-                header('Location:/index.php?action=compte');
-                exit();
+                header('Location: index.php');
             } else {
-                $error = "Adresse e-mail ou mot de passe incorrect";
+                $error = "Username ou mot de passe incorrect";
+                echo $error;
             }
         }
 
         // Charge la vue de connexion en lui passant éventuellement un message d'erreur
-        include '/app/view/connexion.php?error=' . $error;
+        include 'app/view/connexion.php';
     }
 
     public function logout()
     {
         // Déconnecte l'utilisateur en supprimant sa session
         session_destroy();
-        header('Location: /');
+        header('Location: index.php');
         exit();
     }
 }

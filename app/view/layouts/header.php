@@ -1,46 +1,4 @@
 <header class="container-fluid">
-
-    <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-    <a class="navbar-brand" id="navLogo" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="../../app/view/accueil.php">Accueil</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="../../app/view/jeux.php">Liste des jeux</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Les plus populaires</a>
-            </li>
-
-            <?php if ($_SESSION == true) : ?>
-                <?= '<li class="nav-item">
-                <a class="nav-link" href="inscription.php">Inscription</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="connexion.php">Connexion</a>
-            </li>'; ?>
-
-            <?php endif; ?>
-
-            <?php if ($_SESSION == true) : ?>
-
-
-                <?=
-                '<li class="nav-item">
-                <a id="my-account" href="../../app/view/myprofile.php"><i class="fa-regular fa-user"></i></a>
-                </li>'; ?>
-
-            <?php endif; ?>
-
-        </ul>
-    </div>
-</nav> -->
-
     <nav class="navbar navbar-expand-lg fixed-top">
         <a id="nav-title" class="navbar-brand nav-logo" href="../../app/view/accueil.php"><img src="../../public/images/gamescenternav-removebg-preview.png" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,7 +18,7 @@
         <div class="collapse navbar-collapse " id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active link">
-                    <a class="nav-link" href="?action=accueil">Accueil<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="?action=accueil">Accueil</a>
                 </li>
                 <li class="nav-item link">
                     <a class="nav-link" href="?action=gamelist">Liste des jeux</a>
@@ -70,15 +28,21 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" id="loginNav" href="?action=connexion"> Connexion</a>
-                </li>
-                <li class="nav-item ml-2 mr-3">
-                    <a class="nav-link" id="signupNav" href="?action=inscription"> Inscription</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="?action=compte"><i class="fa-regular fa-user"></i> Mon compte</a>
-                </li>
+                <?php if (isset($_SESSION['user_id'])) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?action=compte"><i class="fa-regular fa-user"></i> Mon compte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="unset-nav" href="?action=deconnexion">Déconnexion</a>
+                    </li>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" id="loginNav" href="?action=connexion"> Connexion</a>
+                    </li>
+                    <li class="nav-item ml-2 mr-3">
+                        <a class="nav-link" id="signupNav" href="?action=inscription"> Inscription</a>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </nav>

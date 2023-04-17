@@ -1,6 +1,6 @@
 <?php
 
-namespace games\controller;
+namespace Games\controller;
 
 class Controller
 {

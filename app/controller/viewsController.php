@@ -1,14 +1,12 @@
 <?php
 
+namespace Games\controller;
 
-namespace games\controller;
-
-use games\controller\Controller;
-
-require_once 'controller.php';
+use Games\controller\Controller;
+use Games\controller\UserController;
 
 
-class viewsController extends Controller
+class ViewsController extends Controller
 {
     // -------- Page principale --------
     public function home()
@@ -68,16 +66,24 @@ class viewsController extends Controller
 
     public function register()
     {
-        require_once $this->control('userController');
+        $userController = new UserController();
+        $userController->register();
     }
 
     public function loginUser()
     {
-        require_once $this->control('userController');
+        $userController = new UserController();
+        $userController->login();
     }
 
     public function deleteUser()
     {
-        require_once $this->control('userController');
+    }
+
+    public function deconnexion()
+    {
+        $userController = new UserController();
+        $userController->logout();
+        header('location: index.php');
     }
 }

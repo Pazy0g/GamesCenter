@@ -1,8 +1,12 @@
 <?php
 // User.php
 
-namespace games\model;
+namespace Games\model;
+
+use Games\model\Dbh;
+
 use PDO;
+
 class User extends Dbh
 {
     private $user_id;
@@ -69,17 +73,27 @@ class User extends Dbh
     public static function findByUsername($username)
     {
         $db = self::connectDB();
+
         $stmt = $db->prepare('SELECT * FROM users WHERE username = ?');
         $stmt->execute([$username]);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$row) {
             return null;
         }
-        return new User($row['username'], $row['email'], $row['password'], $row['user_image'], $row['is_admin']);
+        $user = new User($row['username'], $row['email'], $row['password'], $row['user_image'], $row['is_admin']);
+        $user->user_id = $row['user_id'];
+        return $user;
     }
 
     public function checkPassword($password)
     {
-        return password_verify($password, $this->password);
+        $db = self::connectDB();
+        $stmt = $db->prepare('SELECT * FROM users WHERE username = ?');
+        $stmt->execute([$this->username]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (!$row) {
+            return false; // L'utilisateur n'existe pas
+        }
+        return password_verify($password, $row['password']);
     }
 }

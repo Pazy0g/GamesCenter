@@ -3,7 +3,7 @@
         'name' => 'games/prj',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '89c36eae5140db11b473d326b269888a93cd2a79',
+        'reference' => '46f9fddb2cbf3c809f5ebe9ab2572c9edceae46b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'games/prj' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '89c36eae5140db11b473d326b269888a93cd2a79',
+            'reference' => '46f9fddb2cbf3c809f5ebe9ab2572c9edceae46b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

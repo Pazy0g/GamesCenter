@@ -1,13 +1,10 @@
 <?php
 // Déclaration de la classe Dbh
 
-namespace games\model;
+namespace Games\model;
 
 use PDO;
 use PDOException;
-
-
-require_once 'index.php';
 
 
 abstract class Dbh

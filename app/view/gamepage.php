@@ -22,23 +22,18 @@
 
                 </div>
                 <div class="button-area w-100 row">
-                    <a href="#comment" class="btn w-100 commentButton">Laisser un commentaire</a>
+                    <a href="#" class="btn w-100 commentButton">Laisser un commentaire</a>
                 </div>
             </div>
+
         </div>
     </div>
 
 
 
 
-
-
-
-
-
-
-
-
+    <p>Vous devez être connecté afin de commenter un jeu ! <a href="?action=connexion">Se connecter</a>
+        ou <a href="?action=inscription">S'inscrire</a></p>
 
 
 

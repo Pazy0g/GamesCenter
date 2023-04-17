@@ -1,9 +1,5 @@
 <!doctype html>
 <html lang="fr">
-<?php
-require_once 'index.php';
-
-?>
 
 <head>
     <title>GamesCenter</title>
