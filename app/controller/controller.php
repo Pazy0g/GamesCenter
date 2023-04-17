@@ -17,4 +17,9 @@ class Controller
     {
         return self::ADMIN_VIEW_PATH . $view . '.php';
     }
+
+    public function control($view)
+    {
+        return self::CONTROLLER_PATH . $view . '.php';
+    }
 }

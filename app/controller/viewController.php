@@ -68,16 +68,16 @@ class viewsController extends Controller
 
     public function registerUser()
     {
-        require_once $this->controllerUserCon('userController');
+        require_once $this->control('userController');
     }
 
     public function loginUser()
     {
-        require_once $this->controllerUserCon('userController');
+        require_once $this->control('userController');
     }
 
     public function deleteUser()
     {
-        require_once $this->controllerUserCon('userController');
+        require_once $this->control('userController');
     }
 }

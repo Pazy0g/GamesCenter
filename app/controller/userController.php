@@ -1,45 +1,45 @@
 <?php
 
+
 namespace games\controller;
 
-use games\controller\Controller;
+use games\controller\controller;
 
 class Users extends Controller
 {
     // ----------- Permet de se connecter -----------
-    public function connexionPage(): void
+    function connexionPage(): void
     {
-        require_once $this->view('auth/login');
+        require_once $this->view('connexion');
     }
 
     // -------- connexion à son compte --------
-    public function loginPost(string $username, string $password): void
+    function loginPost($username, $password): void
     {
-        $login = \games\model\Users()::login($username);
+        $login = \games\model\Users::login($username);
 
         if (password_verify($password, $login['password'])) {
             $_SESSION['mail'] = $login['mail'];
-            $_SESSION['id'] = $login['id'];
-            $_SESSION['pseudo'] = $login['pseudo'];
-            $_SESSION['id_roles'] = $login['id_roles'];
+            $_SESSION['username'] = $login['username'];
+            $_SESSION['is_admin'] = $login['is_admin'];
 
             header('Location:/dashboard.php');
         } else {
-            require_once $this->view('errors/oops');
+            require_once '/app/view/connexion.php?error=user_not_found';
         }
     }
 
     // -------- enregistrement dans la db des informations pour création d'un compte --------
-    public function addUser(string $pseudo, string $mail, string $password, int $id_roles = null): void
+    function addUser($username, $mail, $password, $is_admin): void
     {
         $user = new \games\model\Users();
 
-        $user->createUser($pseudo, $mail, $password, $id_roles);
-        require_once $this->view('users/register-confirm');
+        $user->newUser($username, $mail, $password, $is_admin);
+        require_once $this->view('index.php?action=connexion');
     }
 
     // -------- mise à jour d'un utilisateur par rapport à son id --------
-    public function updateUserPost(string $pseudo, string $mail, int $id): void
+    function updateUserPost($pseudo, $mail, $id): void
     {
         $user = new \games\model\Users();
 
@@ -49,7 +49,7 @@ class Users extends Controller
     }
 
     // -------- suppression d'un utilisateur par rapport à son id --------
-    public function deleteUser(int $id): void
+    function deleteUser($id): void
     {
         $user = new \games\model\Users();
         $user->deleteUser($id);
@@ -58,7 +58,7 @@ class Users extends Controller
     }
 
     // -------- gestion et verification de la connexion --------
-    public function deconnexion(): void
+    function deconnexion(): void
     {
         session_destroy();
         header('Location:/');
