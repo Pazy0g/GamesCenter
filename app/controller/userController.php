@@ -1,66 +1,84 @@
 <?php
-
+// UserController.php
 
 namespace games\controller;
 
-use games\controller\controller;
+use games\model\User;
 
-class Users extends Controller
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+class UserController
 {
-    // ----------- Permet de se connecter -----------
-    function connexionPage(): void
+    public function register()
     {
-        require_once $this->view('connexion');
-    }
+        if (isset($_POST['submit'])) {
+            $error = '';
+            echo 'post send';
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Récupère les données du formulaire d'inscription
+                $username = htmlspecialchars($_POST['uid'], ENT_QUOTES, 'UTF-8');
+                $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+                $password = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
+                var_dump($username, $email, $password);
+                // Vérifie que les champs ont bien été renseignés
+                if (empty($username) || empty($email) || empty($password)) {
+                    $error = "Veuillez remplir tous les champs";
+                }
+                // Vérifie que les mots de passe sont identiques
 
-    // -------- connexion à son compte --------
-    function loginPost($username, $password): void
-    {
-        $login = \games\model\Users::login($username);
+                // Vérifie que l'adresse e-mail est valide
+                elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $error = "L'adresse e-mail n'est pas valide";
+                }
+                // Vérifie que l'adresse e-mail n'est pas déjà utilisée
+                elseif (User::findByEmail($email)) {
+                    $error = "L'adresse e-mail est déjà utilisée";
+                }
+                // Si toutes les validations sont OK, crée un nouvel utilisateur et enregistre-le en base de données
+                else {
+                    $user = new User($username, $email, $password);
+                    $user->save();
+                    header('Location:/?action=connexion');
+                    exit();
+                }
+            }
 
-        if (password_verify($password, $login['password'])) {
-            $_SESSION['mail'] = $login['mail'];
-            $_SESSION['username'] = $login['username'];
-            $_SESSION['is_admin'] = $login['is_admin'];
-
-            header('Location:/dashboard.php');
-        } else {
-            require_once '/app/view/connexion.php?error=user_not_found';
+            // Charge la vue d'inscription en lui passant éventuellement un message d'erreur
+            include '/app/view/inscription.php';
         }
     }
 
-    // -------- enregistrement dans la db des informations pour création d'un compte --------
-    function addUser($username, $mail, $password, $is_admin): void
+    public function login()
     {
-        $user = new \games\model\Users();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Récupère les données du formulaire de connexion
+            $username = htmlspecialchars($_POST['uid'], ENT_QUOTES, 'UTF-8');
+            $password = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
 
-        $user->newUser($username, $mail, $password, $is_admin);
-        require_once $this->view('index.php?action=connexion');
+            // Récupère l'utilisateur correspondant à l'adresse e-mail donnée
+            $user = User::findByUsername($username);
+
+            // Vérifie que l'utilisateur existe et que le mot de passe est correct
+            if ($user && $user->checkPassword($password)) {
+                // Stocke l'utilisateur en session pour le connecter
+                $_SESSION['user_id'] = $user->getUserId();
+                header('Location:/index.php?action=compte');
+                exit();
+            } else {
+                $error = "Adresse e-mail ou mot de passe incorrect";
+            }
+        }
+
+        // Charge la vue de connexion en lui passant éventuellement un message d'erreur
+        include '/app/view/connexion.php?error=' . $error;
     }
 
-    // -------- mise à jour d'un utilisateur par rapport à son id --------
-    function updateUserPost($pseudo, $mail, $id): void
+    public function logout()
     {
-        $user = new \games\model\Users();
-
-        $user->updateUser($pseudo, $mail, $id);
-
-        header('Location:dashboard.php?action=users');
-    }
-
-    // -------- suppression d'un utilisateur par rapport à son id --------
-    function deleteUser($id): void
-    {
-        $user = new \games\model\Users();
-        $user->deleteUser($id);
-
-        header('Location:dashboard.php?action=users');
-    }
-
-    // -------- gestion et verification de la connexion --------
-    function deconnexion(): void
-    {
+        // Déconnecte l'utilisateur en supprimant sa session
         session_destroy();
-        header('Location:/');
+        header('Location: /');
+        exit();
     }
 }

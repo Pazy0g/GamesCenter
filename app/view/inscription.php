@@ -10,7 +10,7 @@
                 <i class="fa-sharp fa-regular fa-user"></i>
                 <h2>Inscription</h2>
             </div>
-            <form action="?action=register" method="post">
+            <form action="../../../GamesCenter/app/controller/userController.php" method="post">
                 <div class="form-group" id="formdiv-signup">
                     <label for="pseudo" class="SignupLabel">Pseudo</label>
                     <input type="text" name="uid" class="form-control signupInputs" id="SignupInputUid" placeholder="Pseudo">
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="email" class="SignupLabel">Email</label>
-                    <input type="email" name="email" class="form-control signupInputs" id="SignupInputEmail" placeholder="Pseudo">
+                    <input type="email" name="email" class="form-control signupInputs" id="SignupInputEmail" placeholder="votre email">
                 </div>
                 <div id="respPwd" class="form-group">
                     <label for="password" class="SignupLabel">Mot de passe</label>
@@ -30,7 +30,7 @@
                         Vous devez accepter la RGPD pour vous inscrire
                     </label>
                 </div>
-                <button type="submit" id="SignupSubmit" class="btn btn-primary">Valider</button>
+                <button type="submit" id="SignupSubmit" name="submit" class="btn btn-primary">Valider</button>
 
                 <p id="Signup-back"><a href="?action=accueil">Revenir à l'accueil</a></p>
 

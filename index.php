@@ -27,7 +27,7 @@ $actionList = [
     'popular' => 'popularGames',
     'about' => 'about',
     'accueil' => 'home',
-    'register' => 'registerUser',
+    'register' => 'register',
     'login' => 'loginUser',
     'delete' => 'deleteUser'
 ];
@@ -42,7 +42,3 @@ if (isset($_GET['action']) && array_key_exists($_GET['action'], $actionList)) {
 
     $frontController->$defaultAction();
 }
-
-        /* ----------------------------------------------------------------
-      -------------------- Gestion de la Connexion ----------------------
-      ---------------------------------------------------------------- */

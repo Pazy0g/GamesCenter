@@ -2,103 +2,84 @@
 // User.php
 
 namespace games\model;
-
-class Users extends Dbh
+use PDO;
+class User extends Dbh
 {
-    // --------------- Requête pour enregister un user ---------------
-    public function newUser(string $pseudo, string $mail, string $password, $is_admin = null): void
+    private $user_id;
+    private $username;
+    private $email;
+    private $password;
+    private $user_image;
+    private $is_admin;
+
+    public function __construct($username, $email, $password, $user_image = null, $is_admin = false)
     {
-        $db = self::connectDB();
-
-        $req = $db->prepare(
-            "INSERT INTO 
-        users(
-          username, 
-          email,
-          `password`,
-          is_admin
-        ) 
-      VALUES (:pseudo, :mail, :password, :is_admin)"
-        );
-
-        $req->execute([
-            ':username' => $pseudo,
-            ':email' => $mail,
-            ':password' => password_hash($password, PASSWORD_DEFAULT),
-            ':is_admin' => $is_admin
-        ]);
+        $this->username = $username;
+        $this->email = $email;
+        $this->password = password_hash($password, PASSWORD_DEFAULT);
+        $this->user_image = $user_image;
+        $this->is_admin = $is_admin;
     }
 
-    // --------------- Requête pour se connecter ---------------
-    public static function login(string $username): mixed
+    public function getUserId()
     {
-        $db = self::connectDB();
-
-        $req = $db->prepare("SELECT user_id, username, email, `password`, is_admin FROM users WHERE username = :username");
-        $req->execute([':username' => $username]);
-
-        return $req->fetch();
+        return $this->user_id;
     }
 
-
-    // --------------- Requête pour mettre à jour un user ---------------
-    public function updateUser($username, $email, $user_id): void
+    public function getUsername()
     {
-        $db = self::connectDB();
-
-        $req = $db->prepare(
-            "UPDATE users SET 
-        username = :username,
-        email = :email
-      WHERE user_id = :user_id"
-        );
-
-        $req->execute([
-            ':username' => $username,
-            ':email' => $email,
-            ':user_id' => $user_id
-        ]);
+        return $this->username;
     }
 
-    // --------------- Requête pour supprimer un user ---------------
-    public function deleteUser($user_id): void
+    public function getEmail()
     {
-        $db = self::connectDB();
-
-        $req = $db->prepare("DELETE FROM users WHERE user_id = :user_id");
-        $req->execute([':user_id' => $user_id]);
+        return $this->email;
     }
 
-    // --------------- Requête pour récupérer tous les users ---------------
-    // public function getAllUsers(): array
-    // {
-    //     $db = self::connectDB();
+    public function getUserImage()
+    {
+        return $this->user_image;
+    }
 
-    //     $req = $db->prepare("SELECT id, pseudo, mail, DATE_FORMAT(created_at,'%d/%m/%Y %H:%i') AS `date`, `name` FROM users INNER JOIN `user-roles` ON `users`.id_roles = `user-roles`.id_role;");
-    //     $req->execute();
+    public function isAdmin()
+    {
+        return $this->is_admin;
+    }
 
-    //     return $req->fetchAll();
-    // }
+    public function save()
+    {
+        $db = self::connectDB();
+        $stmt = $db->prepare('INSERT INTO users (username, email, password, user_image, is_admin) VALUES (?, ?, ?, ?, ?)');
+        $stmt->execute([$this->username, $this->email, $this->password, $this->user_image, $this->is_admin]);
+        $this->user_id = $db->lastInsertId();
+    }
 
-    // // --------------- Requête pour récupérer un user par rapport à son id ---------------
-    // public static function getUserById($id): array
-    // {
-    //     $db = self::connectDB();
+    public static function findByEmail($email)
+    {
+        $db = self::connectDB();
+        $stmt = $db->prepare('SELECT * FROM users WHERE email = ?');
+        $stmt->execute([$email]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (!$row) {
+            return null;
+        }
+        return new User($row['username'], $row['email'], $row['password'], $row['user_image'], $row['is_admin']);
+    }
 
-    //     $req = $db->prepare("SELECT * FROM users WHERE id = :id");
-    //     $req->execute([':id' => $id]);
+    public static function findByUsername($username)
+    {
+        $db = self::connectDB();
+        $stmt = $db->prepare('SELECT * FROM users WHERE username = ?');
+        $stmt->execute([$username]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+        if (!$row) {
+            return null;
+        }
+        return new User($row['username'], $row['email'], $row['password'], $row['user_image'], $row['is_admin']);
+    }
 
-    //     return $req->fetch();
-    // }
-
-    // // --------------- Requête pour savoir le nombre d'utilisateurs ---------------
-    // public static function countUsers(): array
-    // {
-    //     $db = self::connectDB();
-
-    //     $req = $db->prepare("SELECT COUNT(id) AS nb FROM users");
-    //     $req->execute();
-
-    //     return $req->fetch();
-    // }
+    public function checkPassword($password)
+    {
+        return password_verify($password, $this->password);
+    }
 }
