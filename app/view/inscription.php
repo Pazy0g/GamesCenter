@@ -10,7 +10,7 @@
                 <i class="fa-sharp fa-regular fa-user"></i>
                 <h2>Inscription</h2>
             </div>
-            <form action="../../../GamesCenter/app/controller/userController.php" method="post">
+            <form action="?action=register" method="post">
                 <div class="form-group" id="formdiv-signup">
                     <label for="pseudo" class="SignupLabel">Pseudo</label>
                     <input type="text" name="uid" class="form-control signupInputs" id="SignupInputUid" placeholder="Pseudo">
