@@ -43,24 +43,26 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="?action=delete">
+                    <form method="post" action="?action=edituserinfo">
                         <div class="form-group">
                             <label for="nom" class="col-form-label">pseudo:</label>
-                            <input type="text" class="form-control" id="nom">
+                            <input type="text" name="username" class="form-control" id="nom">
                         </div>
                         <div class="form-group">
                             <label for="email" class="col-form-label">Email:</label>
-                            <input type="email" class="form-control" id="email">
+                            <input type="email" name="email" class="form-control" id="email">
                         </div>
                         <div class="form-group">
                             <label for="password" class="col-form-label">Mot de passe:</label>
-                            <input type="password" class="form-control" id="password">
+                            <input type="password" name="password" class="form-control" id="password">
                         </div>
+                        <button type="submit" name="submit" class="btn btn-primary">Enregistrer les modifications</button>
                     </form>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                    <a href="?action=edituserinfo" class="btn btn-primary">Enregistrer les modifications</a>
+
+
                 </div>
             </div>
         </div>

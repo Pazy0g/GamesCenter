@@ -4,8 +4,8 @@
 namespace Games\model;
 
 use Games\model\Dbh;
-
 use PDO;
+use PDOException;
 
 class User extends Dbh
 {
@@ -127,12 +127,13 @@ class User extends Dbh
     }
 
 
-    public function updateUser($username, $email, $password)
+    public function updateUser($user_id, $username, $email, $password)
     {
-        // Vérifiez si l'utilisateur existe dans la base de données
         $db = self::connectDB();
+
+        // Vérifier si l'utilisateur existe dans la base de données
         $stmt = $db->prepare('SELECT * FROM users WHERE user_id = ?');
-        $stmt->execute([$this->user_id]);
+        $stmt->execute([$user_id]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if (!$user) {
@@ -141,10 +142,12 @@ class User extends Dbh
 
         // Mettre à jour les informations de l'utilisateur dans la base de données
         $stmt = $db->prepare('UPDATE users SET username = ?, email = ?, password = ? WHERE user_id = ?');
-        $stmt->execute([$username, $email, password_hash($password, PASSWORD_DEFAULT), $this->user_id]);
+        $stmt->execute([$username, $email, password_hash($password, PASSWORD_DEFAULT), $user_id]);
 
         // Mettre à jour les propriétés de l'objet User actuel avec les nouvelles valeurs
         $this->username = $username;
         $this->email = $email;
+
+        return true;
     }
 }

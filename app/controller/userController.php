@@ -5,6 +5,8 @@ namespace Games\controller;
 
 use Games\model\User;
 
+use const PHPSTORM_META\ANY_ARGUMENT;
+
 class UserController
 {
     public function register()
@@ -71,7 +73,6 @@ class UserController
         // Déconnecte l'utilisateur en supprimant sa session
         session_destroy();
         header('Location: index.php');
-        exit();
     }
 
     public function deleteAccount()
@@ -101,28 +102,27 @@ class UserController
         if (!isset($_SESSION['user_id'])) {
             // Redirigez vers la page de connexion si l'utilisateur n'est pas connecté
             header('Location: connexion.php');
-            exit;
         }
 
         // Récupérez l'ID de l'utilisateur à partir de la session
         $user_id = $_SESSION['user_id'];
-        var_dump($user_id);
+
         // Récupérez l'objet User correspondant à l'utilisateur connecté
         $user = User::getUserId($user_id);
 
         // Vérifiez si le formulaire a été soumis
         if (isset($_POST['submit'])) {
             // Récupérez les nouvelles informations de l'utilisateur à partir du formulaire
+
             $username = htmlspecialchars($_POST['username']);
             $email = htmlspecialchars($_POST['email']);
             $password = htmlspecialchars($_POST['password']);
-
+            var_dump($_POST);
             // Mettez à jour les informations de l'utilisateur dans la base de données en utilisant la méthode update() de la classe User
-            $user->update($username, $email, $password);
-
+            $user->updateUser($user_id, $username, $email, $password);
+            var_dump($user);
             // Redirigez l'utilisateur vers la page de profil
-            header('Location: myprofile.php');
-            exit;
+            // header('Location: index.php?action=compte');
         }
     }
 }
