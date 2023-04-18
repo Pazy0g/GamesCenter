@@ -19,7 +19,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-6">
                         <ul class="list-group">
-                            <li class="list-group-item"><strong>Pseudo:</strong> Utilisateur123</li>
+                            <li class="list-group-item"><strong>Pseudo:</strong></li>
                             <li class="list-group-item"><strong>Email:</strong> utilisateur123@gmail.com</li>
                             <li class="list-group-item"><strong>Jeux favoris:</strong> Call of Duty, Fortnite, FIFA</li>
                         </ul>
@@ -28,9 +28,7 @@
                         <button class="btn btn-danger m-3" data-toggle="modal" data-target="#confirm-delete">Supprimer mon profil</button>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </div>
 
@@ -62,7 +60,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                    <button type="button" class="btn btn-primary">Enregistrer les modifications</button>
+                    <a href="?action=edituserinfo" class="btn btn-primary">Enregistrer les modifications</a>
                 </div>
             </div>
         </div>

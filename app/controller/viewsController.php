@@ -4,7 +4,7 @@ namespace Games\controller;
 
 use Games\controller\Controller;
 use Games\controller\UserController;
-
+use Games\model\User;
 
 class ViewsController extends Controller
 {
@@ -29,7 +29,9 @@ class ViewsController extends Controller
     // -------- Page mon compte --------
     public function compte()
     {
-        require_once $this->view('myprofile');
+        if (isset($_SESSION['user_id'])) {
+            require_once $this->view('myprofile');
+        }
     }
 
     // -------- Page jeu --------
@@ -78,6 +80,14 @@ class ViewsController extends Controller
 
     public function deleteUser()
     {
+        $userController = new UserController();
+        $userController->deleteAccount();
+    }
+
+    public function editUser()
+    {
+        $userController = new UserController();
+        $userController->editAccount();
     }
 
     public function deconnexion()

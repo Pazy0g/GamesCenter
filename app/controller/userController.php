@@ -15,7 +15,6 @@ class UserController
                 $username = htmlspecialchars($_POST['uid'], ENT_QUOTES, 'UTF-8');
                 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
                 $password = htmlspecialchars($_POST['pwd'], ENT_QUOTES, 'UTF-8');
-                var_dump($username, $email, $password);
                 // Vérifie que les champs ont bien été renseignés
                 if (empty($username) || empty($email) || empty($password)) {
                     $error = "Veuillez remplir tous les champs";
@@ -56,11 +55,10 @@ class UserController
             // Vérifie que l'utilisateur existe et que le mot de passe est correct
             if ($user && $user->checkPassword($password)) {
                 // Stocke l'utilisateur en session pour le connecter
-                $_SESSION['user_id'] = $user->getUserId();
+                $_SESSION['user_id'] = $user->getUserLogin();
                 header('Location: index.php');
             } else {
                 $error = "Username ou mot de passe incorrect";
-                echo $error;
             }
         }
 
@@ -74,5 +72,57 @@ class UserController
         session_destroy();
         header('Location: index.php');
         exit();
+    }
+
+    public function deleteAccount()
+    {
+        // Vérifiez si l'utilisateur est connecté
+        if (!isset($_SESSION['user_id'])) {
+            // Redirigez vers la page de connexion si l'utilisateur n'est pas connecté
+            header('Location: login.php');
+            exit;
+        } else {
+            // Récupérez l'ID de l'utilisateur à partir de la session
+            $user_id = $_SESSION['user_id'];
+
+            // Supprimez l'utilisateur de la base de données en utilisant la méthode delete() de la classe User
+            User::delete($user_id);
+
+            // Déconnectez l'utilisateur et redirigez-le vers la page d'accueil
+            session_destroy();
+            header('Location: index.php');
+            exit;
+        }
+    }
+
+    public function editAccount()
+    {
+        // Vérifiez si l'utilisateur est connecté
+        if (!isset($_SESSION['user_id'])) {
+            // Redirigez vers la page de connexion si l'utilisateur n'est pas connecté
+            header('Location: connexion.php');
+            exit;
+        }
+
+        // Récupérez l'ID de l'utilisateur à partir de la session
+        $user_id = $_SESSION['user_id'];
+        var_dump($user_id);
+        // Récupérez l'objet User correspondant à l'utilisateur connecté
+        $user = User::getUserId($user_id);
+
+        // Vérifiez si le formulaire a été soumis
+        if (isset($_POST['submit'])) {
+            // Récupérez les nouvelles informations de l'utilisateur à partir du formulaire
+            $username = htmlspecialchars($_POST['username']);
+            $email = htmlspecialchars($_POST['email']);
+            $password = htmlspecialchars($_POST['password']);
+
+            // Mettez à jour les informations de l'utilisateur dans la base de données en utilisant la méthode update() de la classe User
+            $user->update($username, $email, $password);
+
+            // Redirigez l'utilisateur vers la page de profil
+            header('Location: myprofile.php');
+            exit;
+        }
     }
 }

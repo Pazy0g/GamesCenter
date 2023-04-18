@@ -27,7 +27,9 @@ $actionList = [
     'accueil' => 'home',
     'register' => 'register',
     'login' => 'loginUser',
-    'deconnexion' => 'deconnexion'
+    'deconnexion' => 'deconnexion',
+    'delete' => 'deleteUser',
+    'edituserinfo' => 'editUser'
 ];
 
 // Action par défaut si aucune action n'est encore définie

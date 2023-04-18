@@ -24,10 +24,23 @@ class User extends Dbh
         $this->user_image = $user_image;
         $this->is_admin = $is_admin;
     }
-
-    public function getUserId()
+    public function getUserLogin()
     {
         return $this->user_id;
+    }
+    public static function getUserId($user_id)
+    {
+        $db = self::connectDB();
+        $stmt = $db->prepare('SELECT * FROM users WHERE user_id = ?');
+        $stmt->execute([$user_id]);
+
+        $user_data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($user_data) {
+            return new self($user_data['user_id'], $user_data['username'], $user_data['email'], $user_data['password']);
+        } else {
+            return null;
+        }
     }
 
     public function getUsername()
@@ -95,5 +108,43 @@ class User extends Dbh
             return false; // L'utilisateur n'existe pas
         }
         return password_verify($password, $row['password']);
+    }
+
+    public static function delete($user_id)
+    {
+        $db = self::connectDB();
+
+        // Recherchez l'utilisateur dans la base de données par son ID
+        $stmt = $db->prepare('SELECT * FROM users WHERE user_id = ?');
+        $stmt->execute([$user_id]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // Supprimez l'utilisateur s'il existe
+        if ($user) {
+            $stmt = $db->prepare('DELETE FROM users WHERE user_id = ?');
+            $stmt->execute([$user_id]);
+        }
+    }
+
+
+    public function updateUser($username, $email, $password)
+    {
+        // Vérifiez si l'utilisateur existe dans la base de données
+        $db = self::connectDB();
+        $stmt = $db->prepare('SELECT * FROM users WHERE user_id = ?');
+        $stmt->execute([$this->user_id]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if (!$user) {
+            return false;
+        }
+
+        // Mettre à jour les informations de l'utilisateur dans la base de données
+        $stmt = $db->prepare('UPDATE users SET username = ?, email = ?, password = ? WHERE user_id = ?');
+        $stmt->execute([$username, $email, password_hash($password, PASSWORD_DEFAULT), $this->user_id]);
+
+        // Mettre à jour les propriétés de l'objet User actuel avec les nouvelles valeurs
+        $this->username = $username;
+        $this->email = $email;
     }
 }
