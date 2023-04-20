@@ -29,7 +29,8 @@ $actionList = [
     'login' => 'loginUser',
     'deconnexion' => 'deconnexion',
     'delete' => 'deleteUser',
-    'edituserinfo' => 'editUser'
+    'edituserinfo' => 'editUser',
+    'comment' => 'comment'
 ];
 
 // Action par défaut si aucune action n'est encore définie

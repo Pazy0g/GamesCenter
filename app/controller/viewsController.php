@@ -5,6 +5,7 @@ namespace Games\controller;
 use Games\controller\Controller;
 use Games\controller\UserController;
 use Games\model\User;
+use Games\controller\CommentController;
 
 class ViewsController extends Controller
 {
@@ -94,6 +95,13 @@ class ViewsController extends Controller
     {
         $userController = new UserController();
         $userController->logout();
+        header('location: index.php');
+    }
+
+    public function comment()
+    {
+        $commentController = new CommentController();
+        $commentController->create();
         header('location: index.php');
     }
 }

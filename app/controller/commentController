@@ -1,0 +1,38 @@
+<?php
+
+namespace Games\controller;
+
+use Games\model\Comment;
+
+class CommentController
+{
+    public function create()
+    {
+        if (!empty($_POST)) {
+            $content = $_POST['content'];
+            $game_id = $_POST['game_id'];
+            // Récupération de l'id de l'utilisateur connecté
+            $user_id = 1; // Remplacer par la méthode de récupération de l'id de l'utilisateur
+            $comment = new Comment(null, $content, null, $game_id, $user_id);
+            if ($comment->save()) {
+                echo "Commentaire enregistré avec succès !";
+            } else {
+                echo "Erreur lors de l'enregistrement du commentaire.";
+            }
+        } else {
+            echo "Veuillez remplir le formulaire.";
+        }
+    }
+
+    public function listByGameId($game_id)
+    {
+        $comments = Comment::getByGameId($game_id);
+        if ($comments != null) {
+            foreach ($comments as $comment) {
+                echo "<p>" . $comment->getContent() . "</p>";
+            }
+        } else {
+            echo "Aucun commentaire trouvé.";
+        }
+    }
+}
