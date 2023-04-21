@@ -51,6 +51,13 @@
 
 
 :root {
+    --purple: hsl(240, 80%, 89%);
+    --pink: hsl(0, 59%, 94%);
+    --light-bg: hsl(204, 37%, 92%);
+    --light-gray-bg: hsl(0, 0%, 94%);
+    --white: hsl(0, 0%, 100%);
+    --dark: hsl(0, 0%, 7%);
+    --text-gray: hsl(0, 0%, 30%);
     /* buttons color */
     --button-color: #17a2b8;
     --button-hover-color: #117a8b;
@@ -61,14 +68,6 @@
 
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-body {
-
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -211,11 +210,9 @@ nav li {
 
 /* Main */
 
-
-/* https://cdn.shopify.com/s/files/1/1183/1328/files/1_6408dca8-ff89-4cf4-ae78-af41265de1a5.jpg?v=1663224744 */
 /* First banner & button */
 #banner {
-    background-image: url("https://wallpaperaccess.com/full/625497.jpg");
+    background-image: url("../images/banner.webp");
     background-size: cover;
     background-position: center;
     height: 1000px;
@@ -238,18 +235,6 @@ nav li {
     text-align: center;
     font-family: var(--font-family);
 }
-
-:root {
-    --purple: hsl(240, 80%, 89%);
-    --pink: hsl(0, 59%, 94%);
-    --light-bg: hsl(204, 37%, 92%);
-    --light-gray-bg: hsl(0, 0%, 94%);
-    --white: hsl(0, 0%, 100%);
-    --dark: hsl(0, 0%, 7%);
-    --text-gray: hsl(0, 0%, 30%);
-}
-
-
 
 h3 {
     font-size: 1.5em;
@@ -501,7 +486,7 @@ a {
 /* Recent comment section */
 
 #container-break {
-    background-image: url("https://wallpaper.dog/large/20492411.jpg");
+    background-image: url("../images/container-break.jpg");
     background-position: center;
     background-size: cover;
     height: 600px;
@@ -732,17 +717,17 @@ a {
 
 .blockresponse {
     background-color: #ffe6e6;
-    /* couleur de fond */
+
     border: 1px solid #ff6666;
-    /* bordure rouge */
+
     color: #ff6666;
-    /* couleur du texte */
+
     padding: 5px;
-    /* espace intérieur de la boîte */
+
     margin-top: 5px;
-    /* marge supérieure pour espacer la boîte de l'input */
+
     font-size: 0.8rem;
-    /* taille de la police */
+
 }
 
 
@@ -887,7 +872,7 @@ a {
 /* ============================ MON COMPTE =============================== */
 
 .profile-body {
-    background-image: url("https://images5.alphacoders.com/570/570416.jpg");
+    background-image: url("../images/profile-body.jpg");
 }
 
 
@@ -944,7 +929,7 @@ a {
 
 
 .gamepage-container {
-    background-image: url("https://images4.alphacoders.com/109/109174.jpg");
+    background-image: url("../images/gamepage-container.jpg");
 }
 
 

@@ -23,16 +23,4 @@ class CommentController
             echo "Veuillez remplir le formulaire.";
         }
     }
-
-    public function listByGameId($game_id)
-    {
-        $comments = Comment::getByGameId($game_id);
-        if ($comments != null) {
-            foreach ($comments as $comment) {
-                echo "<p>" . $comment->getContent() . "</p>";
-            }
-        } else {
-            echo "Aucun commentaire trouvé.";
-        }
-    }
 }

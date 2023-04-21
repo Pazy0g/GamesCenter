@@ -21,7 +21,11 @@ abstract class Dbh
     $dbname = $_ENV['DB_NAME'];
     $user = $_ENV['DB_USER'];
     $password = $_ENV['DB_PASSWORD'];
-    $port = $_ENV['DB_PORT'];
+    if (!isset($_ENV['DB_PORT']) && !empty($_ENV['DB_PORT'])) {
+      $port = ":" . $_ENV['DB_PORT'];
+    } else {
+      $port = "";
+    }
 
 
     // Vérifie si une instance de connexion existe déjà

@@ -50,38 +50,9 @@ class Comment
 
     public function save()
     {
-        try {
-            $db = Dbh::connectDB();
-            $stmt = $db->prepare("INSERT INTO comments (content, comment_date, game_id, user_id) VALUES (:content, NOW(), :game_id, :user_id)");
-            $stmt->bindParam(':content', $this->content);
-            $stmt->bindParam(':game_id', $this->game_id);
-            $stmt->bindParam(':user_id', $this->user_id);
-            $stmt->execute();
-            $this->comment_id = $db->lastInsertId();
-            return true;
-        } catch (PDOException $e) {
-            echo "Erreur DB : " . $e->getMessage();
-            return false;
-        }
     }
 
     public static function getByGameId($game_id)
     {
-        try {
-            $db = Dbh::connectDB();
-            $stmt = $db->prepare("SELECT * FROM comments WHERE game_id = :game_id ORDER BY comment_date DESC");
-            $stmt->bindParam(':game_id', $game_id);
-            $stmt->execute();
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $comments = array();
-            foreach ($result as $row) {
-                $comment = new Comment($row['comment_id'], $row['content'], $row['comment_date'], $row['game_id'], $row['user_id']);
-                $comments[] = $comment;
-            }
-            return $comments;
-        } catch (PDOException $e) {
-            echo "Erreur DB : " . $e->getMessage();
-            return null;
-        }
     }
 }

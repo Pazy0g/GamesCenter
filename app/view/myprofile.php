@@ -12,7 +12,7 @@
 
                 <h1 class="mb-5">Profil utilisateur</h1>
 
-                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="Avatar" width="96px" height="96px" class="rounded-circle"> <br>
+                <img src="../../public/images/profile-avatar-default.webp" alt="Avatar" width="96px" height="96px" class="rounded-circle"> <br>
                 <button class="btn btn-primary mt-3">Modifier l'avatar</button>
 
                 <hr>

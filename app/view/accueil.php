@@ -4,7 +4,7 @@
 <body>
     <main>
         <section id="banner">
-
+            <!-- Section d'en tête à la page -->
             <h1 id="title">Games Center</h1>
 
 
@@ -27,7 +27,7 @@
             <div class="wrap" id="gamesScroll">
                 <div class="box">
                     <div class="box-top box-inner">
-                        <img class="box-image" src="https://static.fnac-static.com/multimedia/Images/FD/Comete/131251/CCP_IMG_ORIGINAL/1717677.jpg" alt="Girl Eating Pizza">
+                        <img class="box-image" src="../../public/images/kratos.jpg" alt="image du jeu">
                         <div class="title-flex">
                             <h3 class="box-title"> Nom du jeu</h3>
                         </div>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="box">
                     <div class="box-top">
-                        <img class="box-image" src="https://images.midilibre.fr/api/v1/images/view/640b2037a16e23724e62a2ad/large/image.webp?v=1" alt="Girl Eating Pizza">
+                        <img class="box-image" src="../../public/images/stray.webp" alt="Image du jeu">
                         <div class="title-flex">
                             <h3 class="box-title">Nom du jeu</h3>
                         </div>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="box">
                     <div class="box-top box-inner">
-                        <img class="box-image" src="https://cdn-uploads.gameblog.fr/img/news/420990_64247f76d8703.jpg" alt="Girl Eating Pizza">
+                        <img class="box-image" src="../../public/images/resident-evil-4.webp" alt="Image du jeu">
                         <div class="title-flex">
                             <h3 class="box-title">Nom du jeu</h3>
                         </div>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="box">
                     <div class="box-top box-inner">
-                        <img class="box-image" src="https://image.api.playstation.com/vulcan/ap/rnd/202011/0919/cDHU28ds7cCvKAnVQo719gs0.png" alt="Girl Eating Pizza">
+                        <img class="box-image" src="../../public/images/hogwarts-legacy.webp" alt="Image du jeu">
                         <div class="title-flex">
                             <h3 class="box-title">Nom du jeu</h3>
                         </div>
@@ -83,7 +83,7 @@
                         <a href="?action=gamelist" class="btn mt-4 mb-5 aboutButton">Voir tous les jeux</a>
                     </div>
                     <div id="aboutImage" class="col-md-4 offset-md-1 order-md-2 mb-4 mb-md-0 text-center">
-                        <img src="https://cdn1.epicgames.com/offer/236c74b4cd2e4e3099cbe2ebdc9686fd/EGS_DeadIsland2_DeepSilverDambusterStudios_S1_2560x1440-fdc688ce46680914ee3c4a7949ce8a67" class="w-100 rounded-lg">
+                        <img src="../../public/images/DeadIsland2.jpg" alt="image de dead island 2" class="w-100 rounded-lg">
                         <!-- Remplacez cette image par votre propre image -->
                     </div>
                 </div>
@@ -92,7 +92,7 @@
 
 
         <div id="container-break">
-
+            <!-- Break dans la page avec image de fond -->
         </div>
 
 
@@ -106,7 +106,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="media comment-body-2">
-                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <img src="../../public/images/piece-gif.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
                         <div class="media-body comment-body-timing">
                             <h5 class="mt-0">Nom du jeu 1</h5>
                             <p>Pseudo</p>
@@ -115,7 +115,7 @@
                     </div>
                     <hr>
                     <div class="media comment-body-2">
-                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <img src="../../public/images/piece-gif.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
                         <div class="media-body comment-body-timing">
                             <h5 class="mt-0">Nom du jeu 2</h5>
                             <p>Pseudo</p>
@@ -126,7 +126,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="media comment-body-1">
-                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <img src="../../public/images/piece-gif.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
                         <div class="media-body comment-body-timing">
                             <h5 class="mt-0">Nom du jeu 3</h5>
                             <p>Pseudo</p>
@@ -135,7 +135,7 @@
                     </div>
                     <hr>
                     <div class="media comment-body-1">
-                        <img src="https://opengameart.org/sites/default/files/pieni%C4%85szka%2001_0.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
+                        <img src="../../public/images/piece-gif.gif" class="mr-3 rounded-circle" alt="Avatar" width="64" height="64">
                         <div class="media-body comment-body-timing">
                             <h5 class="mt-0">Nom du jeu 4</h5>
                             <p>Pseudo</p>
