@@ -4,9 +4,9 @@
             <div class="col-md-4">
                 <h5>Liens</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Liste des jeux</a></li>
-                    <li><a href="#">Les plus populaires</a></li>
+                    <li><a href="?action=accueil">Accueil</a></li>
+                    <li><a href="?action=gamelist">Liste des jeux</a></li>
+                    <li><a href="?action=popular">Les plus populaires</a></li>
                 </ul>
             </div>
             <div class="col-md-4 text-center">
@@ -15,7 +15,7 @@
             <div class="col-md-4 text-right">
                 <h5>Informations légales</h5>
                 <p class="text-white-50">123 rue des Jeux<br>75001 Paris<br>France</p>
-                <p class="text-white-50">Téléphone : +33 1 23 45 67 89<br>Email : contact@gamescenter.com</p>
+                <p class="text-white-50">Téléphone : +33 00 00 00 00 <br>Email : contact@gamescenter.com</p>
             </div>
         </div>
     </div>

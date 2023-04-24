@@ -31,7 +31,7 @@
                         <div class="title-flex">
                             <h3 class="box-title"> Nom du jeu</h3>
                         </div>
-                        <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                        <p class="description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, quae, unde totam debitis blanditiis porro rem itaque hic deserunt saepe eveniet quisquam, quas ratione! Modi exercitationem repellendus eum ratione tenetur?</p>
                     </div>
                     <a href="?action=gamepage" class="button">Voir plus</a>
                 </div>
@@ -41,7 +41,7 @@
                         <div class="title-flex">
                             <h3 class="box-title">Nom du jeu</h3>
                         </div>
-                        <p class="description"> roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem sint adipisci illum, minus praesentium iste aspernatur numquam vero quis ipsam earum voluptates velit, voluptatibus dignissimos illo culpa unde esse ad.</p>
                     </div>
                     <a href="?action=gamepage" class="button">Voir plus</a>
                 </div>
@@ -51,7 +51,7 @@
                         <div class="title-flex">
                             <h3 class="box-title">Nom du jeu</h3>
                         </div>
-                        <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                        <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, placeat nam rem impedit nemo unde debitis in eum! Sequi, quod iste id aut commodi distinctio consequuntur saepe iusto ducimus enim?</p>
                     </div>
                     <a href="?action=gamepage" class="button">Voir plus</a>
                 </div>
@@ -61,7 +61,7 @@
                         <div class="title-flex">
                             <h3 class="box-title">Nom du jeu</h3>
                         </div>
-                        <p class="description">Whipped steamed roast cream beans macchiato skinny grinder café. Iced grinder go mocha steamed grounds cultivar panna aroma.</p>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, repudiandae quam dolorem quae nostrum inventore sit sed fugiat quisquam ratione obcaecati officiis sint nobis officia numquam cupiditate cumque repellat necessitatibus.</p>
                     </div>
                     <a href="?action=gamepage" class="button">Voir plus</a>
                 </div>
