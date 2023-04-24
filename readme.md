@@ -18,6 +18,7 @@ Front-End :
 - HTML
 - CSS
 - JavaScript & JavaScript libraries
+- Bootstrap
 
 Back-End : 
 - MySQL, MariaDB
