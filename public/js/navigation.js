@@ -8,11 +8,11 @@ const image = document.getElementById('nav-title');
 //! Fonction pour animer la navbar lors du défilement
 function handleScroll() {
     if (window.pageYOffset > 0) {
-        // Apply the scrolled styles when the user has scrolled down
+        // Ajoute le style scrolled à la navbar lors du défilement
         navbar.classList.add("scrolled");
         image.hidden = true;
     } else {
-        // Reset the navbar styles when the user is at the top of the page
+        // Retire le style scrolled à la navbar si l'utilisateur est remonté en haut de la page
         navbar.classList.remove("scrolled");
         navbar.classList.add("navBack");
         image.hidden = false;

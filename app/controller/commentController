@@ -12,7 +12,7 @@ class CommentController
             $content = $_POST['content'];
             $game_id = $_POST['game_id'];
             // Récupération de l'id de l'utilisateur connecté
-            $user_id = 1; // Remplacer par la méthode de récupération de l'id de l'utilisateur
+            //! ajouter user_id
             $comment = new Comment(null, $content, null, $game_id, $user_id);
             if ($comment->save()) {
                 echo "Commentaire enregistré avec succès !";
