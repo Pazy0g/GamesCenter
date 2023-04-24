@@ -30,7 +30,8 @@ $actionList = [
     'deconnexion' => 'deconnexion',
     'delete' => 'deleteUser',
     'edituserinfo' => 'editUser',
-    'comment' => 'comment'
+    'comment' => 'comment',
+    'legals' => 'legals'
 ];
 
 // Action par défaut si aucune action n'est encore définie

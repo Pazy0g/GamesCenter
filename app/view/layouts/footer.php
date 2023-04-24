@@ -7,6 +7,7 @@
                     <li><a href="?action=accueil">Accueil</a></li>
                     <li><a href="?action=gamelist">Liste des jeux</a></li>
                     <li><a href="?action=popular">Les plus populaires</a></li>
+                    <li><a href="?action=legals">Mentions Légales</a></li>
                 </ul>
             </div>
             <div class="col-md-4 text-center">

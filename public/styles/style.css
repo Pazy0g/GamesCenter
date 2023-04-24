@@ -1110,3 +1110,12 @@ a {
     padding-top: 200px;
     padding-bottom: 200px;
 }
+
+
+
+/* ===================== Mentions légales ===================== */
+
+.legals-main {
+    text-align: center;
+    margin-top: 100px;
+}

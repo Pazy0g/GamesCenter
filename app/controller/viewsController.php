@@ -61,6 +61,11 @@ class ViewsController extends Controller
     {
         require_once $this->view('Apropos');
     }
+
+    public function legals()
+    {
+        require_once $this->view('legals');
+    }
     // Page d'erreur
     public function errorPage()
     {
