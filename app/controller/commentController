@@ -6,21 +6,21 @@ use Games\model\Comment;
 
 class CommentController
 {
-    public function create()
-    {
-        if (!empty($_POST)) {
-            $content = $_POST['content'];
-            $game_id = $_POST['game_id'];
-            // Récupération de l'id de l'utilisateur connecté
-            //! ajouter user_id
-            $comment = new Comment(null, $content, null, $game_id, $user_id);
-            if ($comment->save()) {
-                echo "Commentaire enregistré avec succès !";
-            } else {
-                echo "Erreur lors de l'enregistrement du commentaire.";
-            }
-        } else {
-            echo "Veuillez remplir le formulaire.";
-        }
-    }
+    // public function create()
+    // {
+    //     if (!empty($_POST)) {
+    //         $content = $_POST['content'];
+    //         $game_id = $_POST['game_id'];
+    //         // Récupération de l'id de l'utilisateur connecté
+    //         //! ajouter user_id
+    //         $comment = new Comment(null, $content, null, $game_id, $user_id);
+    //         if ($comment->save()) {
+    //             echo "Commentaire enregistré avec succès !";
+    //         } else {
+    //             echo "Erreur lors de l'enregistrement du commentaire.";
+    //         }
+    //     } else {
+    //         echo "Veuillez remplir le formulaire.";
+    //     }
+    // }
 }
