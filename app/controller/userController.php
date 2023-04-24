@@ -5,8 +5,6 @@ namespace Games\controller;
 
 use Games\model\User;
 
-use const PHPSTORM_META\ANY_ARGUMENT;
-
 class UserController
 {
     public function register()
