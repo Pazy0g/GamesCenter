@@ -114,12 +114,12 @@ class User extends Dbh
     {
         $db = self::connectDB();
 
-        // Recherchez l'utilisateur dans la base de données par son ID
+        // Rechercher l'utilisateur dans la base de données par son ID
         $stmt = $db->prepare('SELECT * FROM users WHERE user_id = ?');
         $stmt->execute([$user_id]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        // Supprimez l'utilisateur s'il existe
+        // Supprimer l'utilisateur s'il existe
         if ($user) {
             $stmt = $db->prepare('DELETE FROM users WHERE user_id = ?');
             $stmt->execute([$user_id]);

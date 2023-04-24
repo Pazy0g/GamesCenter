@@ -29,7 +29,7 @@ class UserController
                 elseif (User::findByEmail($email)) {
                     $error = "L'adresse e-mail est déjà utilisée";
                 }
-                // Si toutes les validations sont OK, crée un nouvel utilisateur et enregistre-le en base de données
+                // Si toutes les validations sont OK, crée un nouvel utilisateur et enregistrement en base de données
                 else {
                     $user = new User($username, $email, $password);
                     $user->save();
@@ -75,19 +75,19 @@ class UserController
 
     public function deleteAccount()
     {
-        // Vérifiez si l'utilisateur est connecté
+        // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user_id'])) {
-            // Redirigez vers la page de connexion si l'utilisateur n'est pas connecté
+            // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
             header('Location: login.php');
             exit;
         } else {
-            // Récupérez l'ID de l'utilisateur à partir de la session
+            // Récupérer l'ID de l'utilisateur à partir de la session
             $user_id = $_SESSION['user_id'];
 
-            // Supprimez l'utilisateur de la base de données en utilisant la méthode delete() de la classe User
+            // Supprimer l'utilisateur de la base de données en utilisant la méthode delete() de la classe User
             User::delete($user_id);
 
-            // Déconnectez l'utilisateur et redirigez-le vers la page d'accueil
+            // Déconnecter l'utilisateur et redirige vers la page d'accueil
             session_destroy();
             header('Location: index.php');
             exit;
@@ -96,27 +96,27 @@ class UserController
 
     public function editAccount()
     {
-        // Vérifiez si l'utilisateur est connecté
+        // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user_id'])) {
-            // Redirigez vers la page de connexion si l'utilisateur n'est pas connecté
+            // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
             header('Location: connexion.php');
         }
 
-        // Récupérez l'ID de l'utilisateur à partir de la session
+        // Récupérer l'ID de l'utilisateur à partir de la session
         $user_id = $_SESSION['user_id'];
 
-        // Récupérez l'objet User correspondant à l'utilisateur connecté
+        // Récupérer l'objet User correspondant à l'utilisateur connecté
         $user = User::getUserId($user_id);
 
-        // Vérifiez si le formulaire a été soumis
+        // Vérifier si le formulaire a été soumis
         if (isset($_POST['submit'])) {
-            // Récupérez les nouvelles informations de l'utilisateur à partir du formulaire
+            // Récupérer les nouvelles informations de l'utilisateur à partir du formulaire
 
             $username = htmlspecialchars($_POST['username']);
             $email = htmlspecialchars($_POST['email']);
             $password = htmlspecialchars($_POST['password']);
             var_dump($_POST);
-            // Mettez à jour les informations de l'utilisateur dans la base de données en utilisant la méthode update() de la classe User
+            // Mettre à jour les informations de l'utilisateur dans la base de données en utilisant la méthode d'update de la classe User
             $user->updateUser($user_id, $username, $email, $password);
             var_dump($user);
             // Redirigez l'utilisateur vers la page de profil

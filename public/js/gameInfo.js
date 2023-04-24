@@ -2,14 +2,14 @@
 const textarea = document.createElement("textarea");
 textarea.style.display = "none";
 const buttonReplace = document.createElement("button");
-// Récupérez le premier élément avec la classe "commentButton"
+// Récupération du premier élément avec la classe "commentButton"
 const buttonComment = document.querySelector(".commentButton");
 
 
-// Ajoutez l'élément textarea comme enfant de l'élément buttonComment
+// Ajouter l'élément textarea comme enfant de l'élément buttonComment
 document.querySelector('.comment-area').appendChild(textarea);
 
-// Ajoutez un événement de clic pour le bouton
+// Ajouter un événement de clic pour le bouton
 buttonComment.addEventListener("click", function comment() {
     // Afficher l'élément textarea
     textarea.classList.add("comment-textarea");
@@ -28,7 +28,7 @@ buttonComment.addEventListener("click", function comment() {
 
     // Ajouter l'événement de clic pour le bouton enregistrer
     newButton.addEventListener("click", function () {
-        // Code a compléter pour enregistrer le commentaire
+        // Code a compléter pour enregistrer le commentaire -- PHP
     });
 
     // Ajouter le nouveau bouton à la place de l'ancien

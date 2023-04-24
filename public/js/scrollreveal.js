@@ -1,16 +1,26 @@
 const sr = ScrollReveal();
 
+/*
+
+    Système de reveal au scroll des éléments
+    en utilisant la librairie scrollRevealJS.
+
+*/
+
+
 sr.reveal('h1', {
     origin: "top",
     duration: 2000
+    // Titre de la page
 });
 
-
+// Section Games
 sr.reveal('#gamesScroll', {
     origin: "left",
     distance: "1000px",
     duration: 2000,
     reset: false
+
 });
 
 sr.reveal('.box-inner', {
@@ -20,7 +30,7 @@ sr.reveal('.box-inner', {
     reset: false
 });
 
-
+// Section about
 sr.reveal(".aboutText", {
     origin: "left",
     distance: "100px",
@@ -43,6 +53,7 @@ sr.reveal("#aboutImage", {
     reset: false
 })
 
+// Section comments
 sr.reveal(".comment-title", {
     origin: "top",
     distance: "80px",
