@@ -19,7 +19,7 @@ class UserController
                 if (empty($username) || empty($email) || empty($password)) {
                     $error = "Veuillez remplir tous les champs";
                 }
-                // Vérifie que les mots de passe sont identiques
+                
 
                 // Vérifie que l'adresse e-mail est valide
                 elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -61,7 +61,6 @@ class UserController
                 $error = "Username ou mot de passe incorrect";
             }
         }
-
         // Charge la vue de connexion en lui passant éventuellement un message d'erreur
         include 'app/view/connexion.php';
     }

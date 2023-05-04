@@ -28,6 +28,7 @@ class User extends Dbh
     {
         return $this->user_id;
     }
+
     public static function getUserId($user_id)
     {
         $db = self::connectDB();

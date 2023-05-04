@@ -8,7 +8,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-use Games\controller\ViewsController;
+use Games\Controller\ViewsController;
 
 // Récupération des Controllers
 $frontController = new ViewsController();

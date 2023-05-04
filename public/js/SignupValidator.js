@@ -26,7 +26,7 @@ function SignupChecker() {
 
     /*
    ! Cette condition vérifie si la longueur de la valeur du pseudo est 
-   ! plus petite que 0 et plus petit que 5 si c'est le cas
+   ! plus grand que 0 et plus petit que 5 si c'est le cas
    ! alors un message d'information s'affiche
     */
 

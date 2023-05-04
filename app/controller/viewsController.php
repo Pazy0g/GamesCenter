@@ -1,11 +1,11 @@
 <?php
 
-namespace Games\controller;
+namespace Games\Controller;
 
-use Games\controller\Controller;
-use Games\controller\UserController;
-use Games\model\User;
-use Games\controller\CommentController;
+use Games\Controller\Controller;
+use Games\Controller\UserController;
+use Games\Model\User;
+use Games\Controller\CommentController;
 
 class ViewsController extends Controller
 {

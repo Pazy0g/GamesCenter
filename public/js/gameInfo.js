@@ -57,7 +57,4 @@ buttonComment.addEventListener("click", function comment() {
     deleteButton.classList.toggle("buttonToggle");
     // Ajouter le bouton "Supprimer" à la place de l'ancien
     document.querySelector('.button-area').appendChild(deleteButton);
-
-
 });
-
